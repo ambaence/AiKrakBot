@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
-from api_handler import KrakenAPI
-from ml_engine.ensemble import EnsembleModel
-from strategies.manager import StrategyManager
+from backend.api_handler import KrakenAPI
+from backend.ml_engine.ensemble import EnsembleModel
+from backend.strategies.manager import StrategyManager
 import logging
 
 class Backtester:

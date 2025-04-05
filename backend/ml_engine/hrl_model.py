@@ -7,7 +7,6 @@ from collections import deque
 import logging
 from config import TRADING_PAIRS
 
-# Structured JSON logging
 logging.basicConfig(
     filename='logs/bot.log',
     level=logging.INFO,
@@ -18,16 +17,7 @@ logger = logging.getLogger(__name__)
 
 class HRLModel:
     def __init__(self, state_size=4, action_size=3, buffer_size=10000, batch_size=32, gamma=0.99, tau=0.001):
-        """Initialize Hierarchical RL with meta-controller and sub-policies.
-
-        Args:
-            state_size (int): Size of the state vector (price, volume, USD, position).
-            action_size (int): Number of possible actions (buy, sell, hold).
-            buffer_size (int): Size of the replay buffer.
-            batch_size (int): Batch size for training.
-            gamma (float): Discount factor for future rewards.
-            tau (float): Soft update parameter for target networks.
-        """
+        """Initialize Hierarchical RL with meta-controller and sub-policies."""
         self.state_size = state_size
         self.action_size = action_size
         self.buffer_size = buffer_size
@@ -70,6 +60,8 @@ class HRLModel:
         self.sub_optimizer = torch.optim.Adam(self.sub_policy.parameters(), lr=0.0003)
         
         self.memory = deque(maxlen=buffer_size)
+
+    # ... rest of the methods (store_experience, predict, train) ...
 
     def store_experience(self, state, action, reward, next_state, done):
         """Store experience in the replay buffer."""

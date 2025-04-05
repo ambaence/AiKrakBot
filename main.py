@@ -7,26 +7,20 @@ from backend.ml_engine.ensemble import EnsembleModel
 from backend.risk_management import RiskManager
 from backend.strategies.manager import StrategyManager
 from frontend.app import TradingApp
+from config import TRADING_PAIRS, LOG_LEVEL, SIMULATE  # Import from config
 
 # Structured JSON logging
 logging.basicConfig(
     filename='logs/bot.log',
-    level=logging.INFO,
+    level=getattr(logging, LOG_LEVEL),
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[logging.FileHandler('logs/bot.log', encoding='utf-8')]
 )
 logger = logging.getLogger(__name__)
 
 async def main():
-    """Main entry point: initializes components and launches the app.
-
-    Raises:
-        ValueError: If required environment variables are missing or invalid.
-        Exception: For unexpected initialization failures.
-    """
     try:
-        # Validate environment variables
-        simulate = os.getenv("SIMULATE", "True").lower() == "true"
+        simulate = SIMULATE  # Use from config.py
         required_env_vars = ["ENCRYPTED_KRAKEN_API_KEY", "ENCRYPTED_KRAKEN_API_SECRET"]
         missing_vars = [var for var in required_env_vars if not os.getenv(var)]
         if not simulate and missing_vars:
@@ -34,18 +28,13 @@ async def main():
 
         logger.info({"event": "initialization_start", "simulate": simulate})
         
-        # Initialize components with error handling
         api = KrakenAPI(simulate=simulate)
-        try:
-            api.get_balance()  # Validate API key permissions
-        except Exception as e:
-            raise ValueError(f"API key validation failed: {str(e)}")
+        api.get_balance()  # Validate API key permissions
 
         model = EnsembleModel(api)
         risk_manager = RiskManager(api)
         strategy_manager = StrategyManager(api, model, risk_manager)
         
-        # Pre-fetch fees for all trading pairs
         for pair in TRADING_PAIRS:
             try:
                 api.fetch_trading_fees(pair)
@@ -55,7 +44,7 @@ async def main():
 
         app = TradingApp(api, model, risk_manager, strategy_manager, simulate=simulate)
         logger.info({"event": "initialization_complete"})
-        app.run()  # Launches the Kivy app
+        app.run()
 
     except ValueError as e:
         logger.error({"event": "initialization_error", "error": str(e)})

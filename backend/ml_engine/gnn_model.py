@@ -13,28 +13,25 @@ class GNNModel:
         self.hidden_dim = GNN_HIDDEN_DIM
         self.layers = GNN_LAYERS
         self.channels = GNN_CHANNELS
-        self.model = self._build_gnn()
-        self.optimizer = tf.keras.optimizers.Adam(learning_rate=GNN_LR)
+        self.optimizer = tf.keras.optimizers.Adam(learning_rate=GNN_LR)  # Define optimizer first
+        self.model = self._build_gnn()  # Build model after optimizer is set
         self.data_buffer = []
         self.logger = logging.getLogger(__name__)
 
     def _build_gnn(self):
         """Build a GNN using Graph Convolutional Networks."""
-        # Input: node features (price, volume over time) and adjacency matrix
-        node_input = tf.keras.Input(shape=self.input_shape, name='node_features')  # (batch, LOOKBACK_PERIOD, 2)
-        adj_input = tf.keras.Input(shape=(LOOKBACK_PERIOD, LOOKBACK_PERIOD), name='adjacency_matrix')  # (batch, LOOKBACK_PERIOD, LOOKBACK_PERIOD)
+        node_input = tf.keras.Input(shape=self.input_shape, name='node_features')
+        adj_input = tf.keras.Input(shape=(LOOKBACK_PERIOD, LOOKBACK_PERIOD), name='adjacency_matrix')
         
-        # Graph Convolutional Layers
         x = node_input
         for _ in range(self.layers):
             x = GCNConv(self.channels, activation='relu')([x, adj_input])
         
-        # Global pooling to reduce graph to single prediction
         x = tf.keras.layers.GlobalAveragePooling1D()(x)
-        output = tf.keras.layers.Dense(1, activation='linear')(x)  # Predict next price
+        output = tf.keras.layers.Dense(1, activation='linear')(x)
 
         model = tf.keras.Model(inputs=[node_input, adj_input], outputs=output)
-        model.compile(optimizer=self.optimizer, loss='mse')
+        model.compile(optimizer=self.optimizer, loss='mse')  # Use pre-defined optimizer
         return model
 
     def update_data(self, price, volume):
@@ -48,10 +45,9 @@ class GNNModel:
         if len(self.data_buffer) < LOOKBACK_PERIOD:
             return
         
-        # Construct node features and adjacency matrix
         node_features = np.array(self.data_buffer).reshape(1, LOOKBACK_PERIOD, 2)
-        adj_matrix = self._create_adjacency_matrix()  # Simple fully-connected graph for now
-        target = np.array([node_features[0, -1, 0]])  # Predict last price as target
+        adj_matrix = self._create_adjacency_matrix()
+        target = np.array([node_features[0, -1, 0]])
         
         self.model.train_on_batch([node_features, adj_matrix], target)
         self.logger.info("GNN trained on recent data")

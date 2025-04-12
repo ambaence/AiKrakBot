@@ -26527,3 +26527,1664 @@ INFO:backend.ml_engine.gan_model:Initializing GANModel on device: cpu
 INFO:backend.ml_engine.hrl_model:{'event': 'hrl_init', 'device': 'cpu', 'state_size': 4, 'action_size': 3}
 ERROR:__main__:{'event': 'unexpected_error', 'error': '__init__() takes 3 positional arguments but 4 were given'}
 ERROR:__main__:{'event': 'fatal_error', 'error': '__init__() takes 3 positional arguments but 4 were given'}
+INFO:kivy:Kivy: v2.3.1
+INFO:kivy:Logger: Record log in /home/ambaence/.kivy/logs/kivy_25-04-12_12.txt
+INFO:kivy:Kivy: Installed at "/home/ambaence/.local/lib/python3.8/site-packages/kivy/__init__.py"
+INFO:kivy:Python: v3.8.10 (default, Mar 18 2025, 20:04:55) 
+[GCC 9.4.0]
+INFO:kivy:Python: Interpreter at "/usr/bin/python3"
+INFO:kivy:Logger: Purge log fired. Processing...
+INFO:kivy:Logger: Purge finished!
+INFO:kivy:Factory: 195 symbols loaded
+INFO:kivy:Image: Providers: img_tex, img_dds, img_sdl2, img_pil (img_ffpyplayer ignored)
+INFO:kivy:Text: Provider: sdl2
+INFO:kivy:Window: Provider: sdl2
+INFO:kivy:GL: Using the "OpenGL" graphics system
+INFO:kivy:GL: Backend used <sdl2>
+INFO:kivy:GL: OpenGL version <b'4.6 (Compatibility Profile) Mesa 21.2.6'>
+INFO:kivy:GL: OpenGL vendor <b'AMD'>
+INFO:kivy:GL: OpenGL renderer <b'AMD Radeon R7 Graphics (CARRIZO, DRM 3.35.0, 5.4.0-212-generic, LLVM 12.0.0)'>
+INFO:kivy:GL: OpenGL parsed version: 4, 6
+INFO:kivy:GL: Shading version <b'4.60'>
+INFO:kivy:GL: Texture max size <16384>
+INFO:kivy:GL: Texture max units <32>
+INFO:kivy:Window: auto add sdl2 input provider
+INFO:kivy:Window: virtual keyboard not allowed, single mode, not docked
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:__main__:{'event': 'initialization_start', 'simulate': True}
+INFO:backend.api_handler:{'event': 'get_balance', 'cached': True}
+Level 1:tensorflow:Creating new FuncGraph for Python function <function standard_lstm at 0x7fdfb834d1f0> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=inputs, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 20, 2), dtype=tf.float32, name=None)), Parameter(name=init_h, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 50), dtype=tf.float32, name=None)), Parameter(name=init_c, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 50), dtype=tf.float32, name=None)), Parameter(name=kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(2, 200), dtype=tf.float32, name=None)), Parameter(name=recurrent_kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(50, 200), dtype=tf.float32, name=None)), Parameter(name=bias, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(200,), dtype=tf.float32, name=None)), Parameter(name=mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=time_major, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=go_backwards, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=sequence_lengths, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=zero_output_for_mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=return_sequences, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=True))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (<tf.Tensor 'Placeholder:0' shape=(None, 20, 2) dtype=float32>, <tf.Tensor 'lstm/zeros:0' shape=(None, 50) dtype=float32>, <tf.Tensor 'lstm/zeros_1:0' shape=(None, 50) dtype=float32>, <tf.Tensor 'lstm/Identity:0' shape=(2, 200) dtype=float32>, <tf.Tensor 'lstm/Identity_1:0' shape=(50, 200) dtype=float32>, <tf.Tensor 'lstm/Identity_2:0' shape=(200,) dtype=float32>, None, False, False, None, False, True)] [kwargs: {}]
+Level 1:tensorflow:Creating new FuncGraph for Python function <function lstm_with_backend_selection.<locals>.gpu_lstm_with_fallback at 0x7fdfb834d940> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=inputs, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 20, 2), dtype=tf.float32, name=None)), Parameter(name=init_h, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 50), dtype=tf.float32, name=None)), Parameter(name=init_c, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 50), dtype=tf.float32, name=None)), Parameter(name=kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(2, 200), dtype=tf.float32, name=None)), Parameter(name=recurrent_kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(50, 200), dtype=tf.float32, name=None)), Parameter(name=bias, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(200,), dtype=tf.float32, name=None)), Parameter(name=mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=time_major, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=go_backwards, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=sequence_lengths, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=zero_output_for_mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=return_sequences, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=True))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (<tf.Tensor 'Placeholder:0' shape=(None, 20, 2) dtype=float32>, <tf.Tensor 'lstm/zeros:0' shape=(None, 50) dtype=float32>, <tf.Tensor 'lstm/zeros_1:0' shape=(None, 50) dtype=float32>, <tf.Tensor 'lstm/Identity:0' shape=(2, 200) dtype=float32>, <tf.Tensor 'lstm/Identity_1:0' shape=(50, 200) dtype=float32>, <tf.Tensor 'lstm/Identity_2:0' shape=(200,) dtype=float32>, None, False, False, None, False, True)] [kwargs: {}]
+Level 1:tensorflow:Gradient for 'Identity'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/grad_ys_0:0
+Level 1:tensorflow:Gradient for 'Identity_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/grad_ys_1:0
+Level 1:tensorflow:Gradient for 'Identity_2'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/grad_ys_2:0
+Level 1:tensorflow:Gradient for 'Identity_3'
+Level 1:tensorflow:  in  --> gradients/grad_ys_3:0
+Level 1:tensorflow:  out --> gradients/grad_ys_3:0
+Level 1:tensorflow:Gradient for 'strided_slice'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/strided_slice_grad/StridedSliceGrad:0
+Level 1:tensorflow:Gradient for 'transpose_9'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/transpose_9_grad/transpose:0
+Level 1:tensorflow:Gradient for 'Squeeze'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/Squeeze_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Squeeze_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_3:0
+Level 1:tensorflow:  out --> gradients/Squeeze_1_grad/Reshape:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (20, None, 50) using add_n
+Level 1:tensorflow:Gradient for 'CudnnRNN'
+Level 1:tensorflow:  in  --> gradients/AddN:0, gradients/Squeeze_grad/Reshape:0, gradients/Squeeze_1_grad/Reshape:0, gradients/zeros_like:0
+Level 1:tensorflow:  out --> gradients/CudnnRNN_grad/CudnnRNNBackprop:0, gradients/CudnnRNN_grad/CudnnRNNBackprop:1, gradients/CudnnRNN_grad/CudnnRNNBackprop:2, gradients/CudnnRNN_grad/CudnnRNNBackprop:3
+Level 1:tensorflow:Gradient for 'transpose'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:0
+Level 1:tensorflow:  out --> gradients/transpose_grad/transpose:0
+Level 1:tensorflow:Gradient for 'ExpandDims'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:1
+Level 1:tensorflow:  out --> gradients/ExpandDims_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'ExpandDims_1'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:2
+Level 1:tensorflow:  out --> gradients/ExpandDims_1_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'concat_1'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:3
+Level 1:tensorflow:  out --> gradients/concat_1_grad/Slice:0, gradients/concat_1_grad/Slice_1:0, gradients/concat_1_grad/Slice_2:0, gradients/concat_1_grad/Slice_3:0, gradients/concat_1_grad/Slice_4:0, gradients/concat_1_grad/Slice_5:0, gradients/concat_1_grad/Slice_6:0, gradients/concat_1_grad/Slice_7:0, gradients/concat_1_grad/Slice_8:0, gradients/concat_1_grad/Slice_9:0, gradients/concat_1_grad/Slice_10:0, gradients/concat_1_grad/Slice_11:0, gradients/concat_1_grad/Slice_12:0, gradients/concat_1_grad/Slice_13:0, gradients/concat_1_grad/Slice_14:0, gradients/concat_1_grad/Slice_15:0
+Level 1:tensorflow:Gradient for 'Reshape'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice:0
+Level 1:tensorflow:  out --> gradients/Reshape_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_1'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_1:0
+Level 1:tensorflow:  out --> gradients/Reshape_1_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_2'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_2:0
+Level 1:tensorflow:  out --> gradients/Reshape_2_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_3'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_3:0
+Level 1:tensorflow:  out --> gradients/Reshape_3_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_4'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_4:0
+Level 1:tensorflow:  out --> gradients/Reshape_4_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_5'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_5:0
+Level 1:tensorflow:  out --> gradients/Reshape_5_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_6'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_6:0
+Level 1:tensorflow:  out --> gradients/Reshape_6_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_7'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_7:0
+Level 1:tensorflow:  out --> gradients/Reshape_7_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_8'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_8:0
+Level 1:tensorflow:  out --> gradients/Reshape_8_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_9'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_9:0
+Level 1:tensorflow:  out --> gradients/Reshape_9_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_10'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_10:0
+Level 1:tensorflow:  out --> gradients/Reshape_10_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_11'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_11:0
+Level 1:tensorflow:  out --> gradients/Reshape_11_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_12'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_12:0
+Level 1:tensorflow:  out --> gradients/Reshape_12_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_13'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_13:0
+Level 1:tensorflow:  out --> gradients/Reshape_13_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_14'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_14:0
+Level 1:tensorflow:  out --> gradients/Reshape_14_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_15'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_15:0
+Level 1:tensorflow:  out --> gradients/Reshape_15_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'transpose_1'
+Level 1:tensorflow:  in  --> gradients/Reshape_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_1_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_2'
+Level 1:tensorflow:  in  --> gradients/Reshape_1_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_2_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_3'
+Level 1:tensorflow:  in  --> gradients/Reshape_2_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_3_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_4'
+Level 1:tensorflow:  in  --> gradients/Reshape_3_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_4_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_5'
+Level 1:tensorflow:  in  --> gradients/Reshape_4_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_5_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_6'
+Level 1:tensorflow:  in  --> gradients/Reshape_5_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_6_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_7'
+Level 1:tensorflow:  in  --> gradients/Reshape_6_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_7_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_8'
+Level 1:tensorflow:  in  --> gradients/Reshape_7_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_8_grad/transpose:0
+Level 1:tensorflow:Gradient for 'split_2'
+Level 1:tensorflow:  in  --> gradients/Reshape_8_grad/Reshape:0, gradients/Reshape_9_grad/Reshape:0, gradients/Reshape_10_grad/Reshape:0, gradients/Reshape_11_grad/Reshape:0, gradients/Reshape_12_grad/Reshape:0, gradients/Reshape_13_grad/Reshape:0, gradients/Reshape_14_grad/Reshape:0, gradients/Reshape_15_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/split_2_grad/concat:0
+Level 1:tensorflow:Gradient for 'split'
+Level 1:tensorflow:  in  --> gradients/transpose_1_grad/transpose:0, gradients/transpose_2_grad/transpose:0, gradients/transpose_3_grad/transpose:0, gradients/transpose_4_grad/transpose:0
+Level 1:tensorflow:  out --> gradients/split_grad/concat:0
+Level 1:tensorflow:Gradient for 'split_1'
+Level 1:tensorflow:  in  --> gradients/transpose_5_grad/transpose:0, gradients/transpose_6_grad/transpose:0, gradients/transpose_7_grad/transpose:0, gradients/transpose_8_grad/transpose:0
+Level 1:tensorflow:  out --> gradients/split_1_grad/concat:0
+Level 1:tensorflow:Gradient for 'concat'
+Level 1:tensorflow:  in  --> gradients/split_2_grad/concat:0
+Level 1:tensorflow:  out --> gradients/concat_grad/Slice:0, gradients/concat_grad/Slice_1:0
+Level 1:tensorflow:Creating new FuncGraph for Python function <function standard_lstm at 0x7fdfb834dca0> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=inputs, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 20, 50), dtype=tf.float32, name=None)), Parameter(name=init_h, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 50), dtype=tf.float32, name=None)), Parameter(name=init_c, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 50), dtype=tf.float32, name=None)), Parameter(name=kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(50, 200), dtype=tf.float32, name=None)), Parameter(name=recurrent_kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(50, 200), dtype=tf.float32, name=None)), Parameter(name=bias, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(200,), dtype=tf.float32, name=None)), Parameter(name=mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=time_major, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=go_backwards, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=sequence_lengths, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=zero_output_for_mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=return_sequences, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (<tf.Tensor 'Placeholder:0' shape=(None, 20, 50) dtype=float32>, <tf.Tensor 'lstm_1/zeros:0' shape=(None, 50) dtype=float32>, <tf.Tensor 'lstm_1/zeros_1:0' shape=(None, 50) dtype=float32>, <tf.Tensor 'lstm_1/Identity:0' shape=(50, 200) dtype=float32>, <tf.Tensor 'lstm_1/Identity_1:0' shape=(50, 200) dtype=float32>, <tf.Tensor 'lstm_1/Identity_2:0' shape=(200,) dtype=float32>, None, False, False, None, False, False)] [kwargs: {}]
+Level 1:tensorflow:Creating new FuncGraph for Python function <function lstm_with_backend_selection.<locals>.gpu_lstm_with_fallback at 0x7fdfb8292790> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=inputs, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 20, 50), dtype=tf.float32, name=None)), Parameter(name=init_h, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 50), dtype=tf.float32, name=None)), Parameter(name=init_c, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 50), dtype=tf.float32, name=None)), Parameter(name=kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(50, 200), dtype=tf.float32, name=None)), Parameter(name=recurrent_kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(50, 200), dtype=tf.float32, name=None)), Parameter(name=bias, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(200,), dtype=tf.float32, name=None)), Parameter(name=mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=time_major, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=go_backwards, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=sequence_lengths, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=zero_output_for_mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=return_sequences, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (<tf.Tensor 'Placeholder:0' shape=(None, 20, 50) dtype=float32>, <tf.Tensor 'lstm_1/zeros:0' shape=(None, 50) dtype=float32>, <tf.Tensor 'lstm_1/zeros_1:0' shape=(None, 50) dtype=float32>, <tf.Tensor 'lstm_1/Identity:0' shape=(50, 200) dtype=float32>, <tf.Tensor 'lstm_1/Identity_1:0' shape=(50, 200) dtype=float32>, <tf.Tensor 'lstm_1/Identity_2:0' shape=(200,) dtype=float32>, None, False, False, None, False, False)] [kwargs: {}]
+Level 1:tensorflow:Gradient for 'Identity'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/grad_ys_0:0
+Level 1:tensorflow:Gradient for 'Identity_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/grad_ys_1:0
+Level 1:tensorflow:Gradient for 'Identity_2'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/grad_ys_2:0
+Level 1:tensorflow:Gradient for 'Identity_3'
+Level 1:tensorflow:  in  --> gradients/grad_ys_3:0
+Level 1:tensorflow:  out --> gradients/grad_ys_3:0
+Level 1:tensorflow:Gradient for 'ExpandDims_2'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/ExpandDims_2_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Squeeze'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/Squeeze_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Squeeze_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_3:0
+Level 1:tensorflow:  out --> gradients/Squeeze_1_grad/Reshape:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (None, 50) using add_n
+Level 1:tensorflow:Gradient for 'strided_slice'
+Level 1:tensorflow:  in  --> gradients/AddN:0
+Level 1:tensorflow:  out --> gradients/strided_slice_grad/StridedSliceGrad:0
+Level 1:tensorflow:Gradient for 'CudnnRNN'
+Level 1:tensorflow:  in  --> gradients/strided_slice_grad/StridedSliceGrad:0, gradients/Squeeze_grad/Reshape:0, gradients/Squeeze_1_grad/Reshape:0, gradients/zeros_like:0
+Level 1:tensorflow:  out --> gradients/CudnnRNN_grad/CudnnRNNBackprop:0, gradients/CudnnRNN_grad/CudnnRNNBackprop:1, gradients/CudnnRNN_grad/CudnnRNNBackprop:2, gradients/CudnnRNN_grad/CudnnRNNBackprop:3
+Level 1:tensorflow:Gradient for 'transpose'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:0
+Level 1:tensorflow:  out --> gradients/transpose_grad/transpose:0
+Level 1:tensorflow:Gradient for 'ExpandDims'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:1
+Level 1:tensorflow:  out --> gradients/ExpandDims_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'ExpandDims_1'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:2
+Level 1:tensorflow:  out --> gradients/ExpandDims_1_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'concat_1'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:3
+Level 1:tensorflow:  out --> gradients/concat_1_grad/Slice:0, gradients/concat_1_grad/Slice_1:0, gradients/concat_1_grad/Slice_2:0, gradients/concat_1_grad/Slice_3:0, gradients/concat_1_grad/Slice_4:0, gradients/concat_1_grad/Slice_5:0, gradients/concat_1_grad/Slice_6:0, gradients/concat_1_grad/Slice_7:0, gradients/concat_1_grad/Slice_8:0, gradients/concat_1_grad/Slice_9:0, gradients/concat_1_grad/Slice_10:0, gradients/concat_1_grad/Slice_11:0, gradients/concat_1_grad/Slice_12:0, gradients/concat_1_grad/Slice_13:0, gradients/concat_1_grad/Slice_14:0, gradients/concat_1_grad/Slice_15:0
+Level 1:tensorflow:Gradient for 'Reshape'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice:0
+Level 1:tensorflow:  out --> gradients/Reshape_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_1'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_1:0
+Level 1:tensorflow:  out --> gradients/Reshape_1_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_2'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_2:0
+Level 1:tensorflow:  out --> gradients/Reshape_2_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_3'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_3:0
+Level 1:tensorflow:  out --> gradients/Reshape_3_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_4'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_4:0
+Level 1:tensorflow:  out --> gradients/Reshape_4_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_5'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_5:0
+Level 1:tensorflow:  out --> gradients/Reshape_5_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_6'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_6:0
+Level 1:tensorflow:  out --> gradients/Reshape_6_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_7'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_7:0
+Level 1:tensorflow:  out --> gradients/Reshape_7_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_8'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_8:0
+Level 1:tensorflow:  out --> gradients/Reshape_8_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_9'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_9:0
+Level 1:tensorflow:  out --> gradients/Reshape_9_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_10'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_10:0
+Level 1:tensorflow:  out --> gradients/Reshape_10_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_11'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_11:0
+Level 1:tensorflow:  out --> gradients/Reshape_11_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_12'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_12:0
+Level 1:tensorflow:  out --> gradients/Reshape_12_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_13'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_13:0
+Level 1:tensorflow:  out --> gradients/Reshape_13_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_14'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_14:0
+Level 1:tensorflow:  out --> gradients/Reshape_14_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_15'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_15:0
+Level 1:tensorflow:  out --> gradients/Reshape_15_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'transpose_1'
+Level 1:tensorflow:  in  --> gradients/Reshape_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_1_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_2'
+Level 1:tensorflow:  in  --> gradients/Reshape_1_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_2_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_3'
+Level 1:tensorflow:  in  --> gradients/Reshape_2_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_3_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_4'
+Level 1:tensorflow:  in  --> gradients/Reshape_3_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_4_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_5'
+Level 1:tensorflow:  in  --> gradients/Reshape_4_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_5_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_6'
+Level 1:tensorflow:  in  --> gradients/Reshape_5_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_6_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_7'
+Level 1:tensorflow:  in  --> gradients/Reshape_6_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_7_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_8'
+Level 1:tensorflow:  in  --> gradients/Reshape_7_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_8_grad/transpose:0
+Level 1:tensorflow:Gradient for 'split_2'
+Level 1:tensorflow:  in  --> gradients/Reshape_8_grad/Reshape:0, gradients/Reshape_9_grad/Reshape:0, gradients/Reshape_10_grad/Reshape:0, gradients/Reshape_11_grad/Reshape:0, gradients/Reshape_12_grad/Reshape:0, gradients/Reshape_13_grad/Reshape:0, gradients/Reshape_14_grad/Reshape:0, gradients/Reshape_15_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/split_2_grad/concat:0
+Level 1:tensorflow:Gradient for 'split'
+Level 1:tensorflow:  in  --> gradients/transpose_1_grad/transpose:0, gradients/transpose_2_grad/transpose:0, gradients/transpose_3_grad/transpose:0, gradients/transpose_4_grad/transpose:0
+Level 1:tensorflow:  out --> gradients/split_grad/concat:0
+Level 1:tensorflow:Gradient for 'split_1'
+Level 1:tensorflow:  in  --> gradients/transpose_5_grad/transpose:0, gradients/transpose_6_grad/transpose:0, gradients/transpose_7_grad/transpose:0, gradients/transpose_8_grad/transpose:0
+Level 1:tensorflow:  out --> gradients/split_1_grad/concat:0
+Level 1:tensorflow:Gradient for 'concat'
+Level 1:tensorflow:  in  --> gradients/split_2_grad/concat:0
+Level 1:tensorflow:  out --> gradients/concat_grad/Slice:0, gradients/concat_grad/Slice_1:0
+Level 1:tensorflow:Creating new FuncGraph for Python function <function standard_gru at 0x7fdfb811b310> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=inputs, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 20, 2), dtype=tf.float32, name=None)), Parameter(name=init_h, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 50), dtype=tf.float32, name=None)), Parameter(name=kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(2, 150), dtype=tf.float32, name=None)), Parameter(name=recurrent_kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(50, 150), dtype=tf.float32, name=None)), Parameter(name=bias, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(2, 150), dtype=tf.float32, name=None)), Parameter(name=mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=time_major, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=go_backwards, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=sequence_lengths, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=zero_output_for_mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=return_sequences, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=True))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (<tf.Tensor 'Placeholder:0' shape=(None, 20, 2) dtype=float32>, <tf.Tensor 'gru/zeros:0' shape=(None, 50) dtype=float32>, <tf.Tensor 'gru/Identity:0' shape=(2, 150) dtype=float32>, <tf.Tensor 'gru/Identity_1:0' shape=(50, 150) dtype=float32>, <tf.Tensor 'gru/Identity_2:0' shape=(2, 150) dtype=float32>, None, False, False, None, False, True)] [kwargs: {}]
+Level 1:tensorflow:Creating new FuncGraph for Python function <function gru_with_backend_selection.<locals>.gpu_gru_with_fallback at 0x7fdfb811b700> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=inputs, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 20, 2), dtype=tf.float32, name=None)), Parameter(name=init_h, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 50), dtype=tf.float32, name=None)), Parameter(name=kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(2, 150), dtype=tf.float32, name=None)), Parameter(name=recurrent_kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(50, 150), dtype=tf.float32, name=None)), Parameter(name=bias, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(2, 150), dtype=tf.float32, name=None)), Parameter(name=mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=time_major, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=go_backwards, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=sequence_lengths, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=zero_output_for_mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=return_sequences, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=True))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (<tf.Tensor 'Placeholder:0' shape=(None, 20, 2) dtype=float32>, <tf.Tensor 'gru/zeros:0' shape=(None, 50) dtype=float32>, <tf.Tensor 'gru/Identity:0' shape=(2, 150) dtype=float32>, <tf.Tensor 'gru/Identity_1:0' shape=(50, 150) dtype=float32>, <tf.Tensor 'gru/Identity_2:0' shape=(2, 150) dtype=float32>, None, False, False, None, False, True)] [kwargs: {}]
+Level 1:tensorflow:Gradient for 'Identity'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/grad_ys_0:0
+Level 1:tensorflow:Gradient for 'Identity_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/grad_ys_1:0
+Level 1:tensorflow:Gradient for 'Identity_2'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/grad_ys_2:0
+Level 1:tensorflow:Gradient for 'strided_slice'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/strided_slice_grad/StridedSliceGrad:0
+Level 1:tensorflow:Gradient for 'transpose_7'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/transpose_7_grad/transpose:0
+Level 1:tensorflow:Gradient for 'Squeeze'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/Squeeze_grad/Reshape:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (20, None, 50) using add_n
+Level 1:tensorflow:Gradient for 'CudnnRNN'
+Level 1:tensorflow:  in  --> gradients/AddN:0, gradients/Squeeze_grad/Reshape:0, gradients/zeros_like:0, gradients/zeros_like_1:0
+Level 1:tensorflow:  out --> gradients/CudnnRNN_grad/CudnnRNNBackprop:0, gradients/CudnnRNN_grad/CudnnRNNBackprop:1, gradients/CudnnRNN_grad/CudnnRNNBackprop:2, gradients/CudnnRNN_grad/CudnnRNNBackprop:3
+Level 1:tensorflow:Gradient for 'transpose'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:0
+Level 1:tensorflow:  out --> gradients/transpose_grad/transpose:0
+Level 1:tensorflow:Gradient for 'ExpandDims'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:1
+Level 1:tensorflow:  out --> gradients/ExpandDims_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'concat'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:3
+Level 1:tensorflow:  out --> gradients/concat_grad/Slice:0, gradients/concat_grad/Slice_1:0, gradients/concat_grad/Slice_2:0, gradients/concat_grad/Slice_3:0, gradients/concat_grad/Slice_4:0, gradients/concat_grad/Slice_5:0, gradients/concat_grad/Slice_6:0, gradients/concat_grad/Slice_7:0, gradients/concat_grad/Slice_8:0, gradients/concat_grad/Slice_9:0, gradients/concat_grad/Slice_10:0, gradients/concat_grad/Slice_11:0
+Level 1:tensorflow:Gradient for 'Reshape_1'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice:0
+Level 1:tensorflow:  out --> gradients/Reshape_1_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_2'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice_1:0
+Level 1:tensorflow:  out --> gradients/Reshape_2_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_3'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice_2:0
+Level 1:tensorflow:  out --> gradients/Reshape_3_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_4'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice_3:0
+Level 1:tensorflow:  out --> gradients/Reshape_4_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_5'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice_4:0
+Level 1:tensorflow:  out --> gradients/Reshape_5_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_6'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice_5:0
+Level 1:tensorflow:  out --> gradients/Reshape_6_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_7'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice_6:0
+Level 1:tensorflow:  out --> gradients/Reshape_7_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_8'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice_7:0
+Level 1:tensorflow:  out --> gradients/Reshape_8_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_9'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice_8:0
+Level 1:tensorflow:  out --> gradients/Reshape_9_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_10'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice_9:0
+Level 1:tensorflow:  out --> gradients/Reshape_10_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_11'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice_10:0
+Level 1:tensorflow:  out --> gradients/Reshape_11_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_12'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice_11:0
+Level 1:tensorflow:  out --> gradients/Reshape_12_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'transpose_1'
+Level 1:tensorflow:  in  --> gradients/Reshape_1_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_1_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_2'
+Level 1:tensorflow:  in  --> gradients/Reshape_2_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_2_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_3'
+Level 1:tensorflow:  in  --> gradients/Reshape_3_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_3_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_4'
+Level 1:tensorflow:  in  --> gradients/Reshape_4_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_4_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_5'
+Level 1:tensorflow:  in  --> gradients/Reshape_5_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_5_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_6'
+Level 1:tensorflow:  in  --> gradients/Reshape_6_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_6_grad/transpose:0
+Level 1:tensorflow:Gradient for 'split_2'
+Level 1:tensorflow:  in  --> gradients/Reshape_8_grad/Reshape:0, gradients/Reshape_7_grad/Reshape:0, gradients/Reshape_9_grad/Reshape:0, gradients/Reshape_11_grad/Reshape:0, gradients/Reshape_10_grad/Reshape:0, gradients/Reshape_12_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/split_2_grad/concat:0
+Level 1:tensorflow:Gradient for 'split'
+Level 1:tensorflow:  in  --> gradients/transpose_2_grad/transpose:0, gradients/transpose_1_grad/transpose:0, gradients/transpose_3_grad/transpose:0
+Level 1:tensorflow:  out --> gradients/split_grad/concat:0
+Level 1:tensorflow:Gradient for 'split_1'
+Level 1:tensorflow:  in  --> gradients/transpose_5_grad/transpose:0, gradients/transpose_4_grad/transpose:0, gradients/transpose_6_grad/transpose:0
+Level 1:tensorflow:  out --> gradients/split_1_grad/concat:0
+Level 1:tensorflow:Gradient for 'Reshape'
+Level 1:tensorflow:  in  --> gradients/split_2_grad/concat:0
+Level 1:tensorflow:  out --> gradients/Reshape_grad/Reshape:0
+Level 1:tensorflow:Creating new FuncGraph for Python function <function standard_gru at 0x7fdfb811b940> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=inputs, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 20, 50), dtype=tf.float32, name=None)), Parameter(name=init_h, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 50), dtype=tf.float32, name=None)), Parameter(name=kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(50, 150), dtype=tf.float32, name=None)), Parameter(name=recurrent_kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(50, 150), dtype=tf.float32, name=None)), Parameter(name=bias, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(2, 150), dtype=tf.float32, name=None)), Parameter(name=mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=time_major, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=go_backwards, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=sequence_lengths, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=zero_output_for_mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=return_sequences, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (<tf.Tensor 'Placeholder:0' shape=(None, 20, 50) dtype=float32>, <tf.Tensor 'gru_1/zeros:0' shape=(None, 50) dtype=float32>, <tf.Tensor 'gru_1/Identity:0' shape=(50, 150) dtype=float32>, <tf.Tensor 'gru_1/Identity_1:0' shape=(50, 150) dtype=float32>, <tf.Tensor 'gru_1/Identity_2:0' shape=(2, 150) dtype=float32>, None, False, False, None, False, False)] [kwargs: {}]
+Level 1:tensorflow:Creating new FuncGraph for Python function <function gru_with_backend_selection.<locals>.gpu_gru_with_fallback at 0x7fdfb811b670> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=inputs, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 20, 50), dtype=tf.float32, name=None)), Parameter(name=init_h, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 50), dtype=tf.float32, name=None)), Parameter(name=kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(50, 150), dtype=tf.float32, name=None)), Parameter(name=recurrent_kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(50, 150), dtype=tf.float32, name=None)), Parameter(name=bias, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(2, 150), dtype=tf.float32, name=None)), Parameter(name=mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=time_major, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=go_backwards, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=sequence_lengths, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=zero_output_for_mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=return_sequences, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (<tf.Tensor 'Placeholder:0' shape=(None, 20, 50) dtype=float32>, <tf.Tensor 'gru_1/zeros:0' shape=(None, 50) dtype=float32>, <tf.Tensor 'gru_1/Identity:0' shape=(50, 150) dtype=float32>, <tf.Tensor 'gru_1/Identity_1:0' shape=(50, 150) dtype=float32>, <tf.Tensor 'gru_1/Identity_2:0' shape=(2, 150) dtype=float32>, None, False, False, None, False, False)] [kwargs: {}]
+Level 1:tensorflow:Gradient for 'Identity'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/grad_ys_0:0
+Level 1:tensorflow:Gradient for 'Identity_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/grad_ys_1:0
+Level 1:tensorflow:Gradient for 'Identity_2'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/grad_ys_2:0
+Level 1:tensorflow:Gradient for 'ExpandDims_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/ExpandDims_1_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Squeeze'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/Squeeze_grad/Reshape:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (None, 50) using add_n
+Level 1:tensorflow:Gradient for 'strided_slice'
+Level 1:tensorflow:  in  --> gradients/AddN:0
+Level 1:tensorflow:  out --> gradients/strided_slice_grad/StridedSliceGrad:0
+Level 1:tensorflow:Gradient for 'CudnnRNN'
+Level 1:tensorflow:  in  --> gradients/strided_slice_grad/StridedSliceGrad:0, gradients/Squeeze_grad/Reshape:0, gradients/zeros_like:0, gradients/zeros_like_1:0
+Level 1:tensorflow:  out --> gradients/CudnnRNN_grad/CudnnRNNBackprop:0, gradients/CudnnRNN_grad/CudnnRNNBackprop:1, gradients/CudnnRNN_grad/CudnnRNNBackprop:2, gradients/CudnnRNN_grad/CudnnRNNBackprop:3
+Level 1:tensorflow:Gradient for 'transpose'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:0
+Level 1:tensorflow:  out --> gradients/transpose_grad/transpose:0
+Level 1:tensorflow:Gradient for 'ExpandDims'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:1
+Level 1:tensorflow:  out --> gradients/ExpandDims_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'concat'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:3
+Level 1:tensorflow:  out --> gradients/concat_grad/Slice:0, gradients/concat_grad/Slice_1:0, gradients/concat_grad/Slice_2:0, gradients/concat_grad/Slice_3:0, gradients/concat_grad/Slice_4:0, gradients/concat_grad/Slice_5:0, gradients/concat_grad/Slice_6:0, gradients/concat_grad/Slice_7:0, gradients/concat_grad/Slice_8:0, gradients/concat_grad/Slice_9:0, gradients/concat_grad/Slice_10:0, gradients/concat_grad/Slice_11:0
+Level 1:tensorflow:Gradient for 'Reshape_1'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice:0
+Level 1:tensorflow:  out --> gradients/Reshape_1_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_2'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice_1:0
+Level 1:tensorflow:  out --> gradients/Reshape_2_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_3'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice_2:0
+Level 1:tensorflow:  out --> gradients/Reshape_3_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_4'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice_3:0
+Level 1:tensorflow:  out --> gradients/Reshape_4_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_5'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice_4:0
+Level 1:tensorflow:  out --> gradients/Reshape_5_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_6'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice_5:0
+Level 1:tensorflow:  out --> gradients/Reshape_6_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_7'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice_6:0
+Level 1:tensorflow:  out --> gradients/Reshape_7_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_8'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice_7:0
+Level 1:tensorflow:  out --> gradients/Reshape_8_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_9'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice_8:0
+Level 1:tensorflow:  out --> gradients/Reshape_9_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_10'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice_9:0
+Level 1:tensorflow:  out --> gradients/Reshape_10_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_11'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice_10:0
+Level 1:tensorflow:  out --> gradients/Reshape_11_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_12'
+Level 1:tensorflow:  in  --> gradients/concat_grad/Slice_11:0
+Level 1:tensorflow:  out --> gradients/Reshape_12_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'transpose_1'
+Level 1:tensorflow:  in  --> gradients/Reshape_1_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_1_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_2'
+Level 1:tensorflow:  in  --> gradients/Reshape_2_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_2_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_3'
+Level 1:tensorflow:  in  --> gradients/Reshape_3_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_3_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_4'
+Level 1:tensorflow:  in  --> gradients/Reshape_4_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_4_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_5'
+Level 1:tensorflow:  in  --> gradients/Reshape_5_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_5_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_6'
+Level 1:tensorflow:  in  --> gradients/Reshape_6_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_6_grad/transpose:0
+Level 1:tensorflow:Gradient for 'split_2'
+Level 1:tensorflow:  in  --> gradients/Reshape_8_grad/Reshape:0, gradients/Reshape_7_grad/Reshape:0, gradients/Reshape_9_grad/Reshape:0, gradients/Reshape_11_grad/Reshape:0, gradients/Reshape_10_grad/Reshape:0, gradients/Reshape_12_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/split_2_grad/concat:0
+Level 1:tensorflow:Gradient for 'split'
+Level 1:tensorflow:  in  --> gradients/transpose_2_grad/transpose:0, gradients/transpose_1_grad/transpose:0, gradients/transpose_3_grad/transpose:0
+Level 1:tensorflow:  out --> gradients/split_grad/concat:0
+Level 1:tensorflow:Gradient for 'split_1'
+Level 1:tensorflow:  in  --> gradients/transpose_5_grad/transpose:0, gradients/transpose_4_grad/transpose:0, gradients/transpose_6_grad/transpose:0
+Level 1:tensorflow:  out --> gradients/split_1_grad/concat:0
+Level 1:tensorflow:Gradient for 'Reshape'
+Level 1:tensorflow:  in  --> gradients/split_2_grad/concat:0
+Level 1:tensorflow:  out --> gradients/Reshape_grad/Reshape:0
+Level 1:tensorflow:Creating new FuncGraph for Python function <function standard_lstm at 0x7fdf9a5e1040> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=inputs, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 20, 2), dtype=tf.float32, name=None)), Parameter(name=init_h, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 64), dtype=tf.float32, name=None)), Parameter(name=init_c, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 64), dtype=tf.float32, name=None)), Parameter(name=kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(2, 256), dtype=tf.float32, name=None)), Parameter(name=recurrent_kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(64, 256), dtype=tf.float32, name=None)), Parameter(name=bias, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(256,), dtype=tf.float32, name=None)), Parameter(name=mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=time_major, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=go_backwards, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=sequence_lengths, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=zero_output_for_mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=return_sequences, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=True))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (<tf.Tensor 'Placeholder:0' shape=(None, 20, 2) dtype=float32>, <tf.Tensor 'lstm1/zeros:0' shape=(None, 64) dtype=float32>, <tf.Tensor 'lstm1/zeros_1:0' shape=(None, 64) dtype=float32>, <tf.Tensor 'lstm1/Identity:0' shape=(2, 256) dtype=float32>, <tf.Tensor 'lstm1/Identity_1:0' shape=(64, 256) dtype=float32>, <tf.Tensor 'lstm1/Identity_2:0' shape=(256,) dtype=float32>, None, False, False, None, False, True)] [kwargs: {}]
+Level 1:tensorflow:Creating new FuncGraph for Python function <function lstm_with_backend_selection.<locals>.gpu_lstm_with_fallback at 0x7fdf9a5e1c10> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=inputs, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 20, 2), dtype=tf.float32, name=None)), Parameter(name=init_h, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 64), dtype=tf.float32, name=None)), Parameter(name=init_c, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 64), dtype=tf.float32, name=None)), Parameter(name=kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(2, 256), dtype=tf.float32, name=None)), Parameter(name=recurrent_kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(64, 256), dtype=tf.float32, name=None)), Parameter(name=bias, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(256,), dtype=tf.float32, name=None)), Parameter(name=mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=time_major, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=go_backwards, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=sequence_lengths, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=zero_output_for_mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=return_sequences, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=True))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (<tf.Tensor 'Placeholder:0' shape=(None, 20, 2) dtype=float32>, <tf.Tensor 'lstm1/zeros:0' shape=(None, 64) dtype=float32>, <tf.Tensor 'lstm1/zeros_1:0' shape=(None, 64) dtype=float32>, <tf.Tensor 'lstm1/Identity:0' shape=(2, 256) dtype=float32>, <tf.Tensor 'lstm1/Identity_1:0' shape=(64, 256) dtype=float32>, <tf.Tensor 'lstm1/Identity_2:0' shape=(256,) dtype=float32>, None, False, False, None, False, True)] [kwargs: {}]
+Level 1:tensorflow:Gradient for 'Identity'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/grad_ys_0:0
+Level 1:tensorflow:Gradient for 'Identity_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/grad_ys_1:0
+Level 1:tensorflow:Gradient for 'Identity_2'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/grad_ys_2:0
+Level 1:tensorflow:Gradient for 'Identity_3'
+Level 1:tensorflow:  in  --> gradients/grad_ys_3:0
+Level 1:tensorflow:  out --> gradients/grad_ys_3:0
+Level 1:tensorflow:Gradient for 'strided_slice'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/strided_slice_grad/StridedSliceGrad:0
+Level 1:tensorflow:Gradient for 'transpose_9'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/transpose_9_grad/transpose:0
+Level 1:tensorflow:Gradient for 'Squeeze'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/Squeeze_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Squeeze_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_3:0
+Level 1:tensorflow:  out --> gradients/Squeeze_1_grad/Reshape:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (20, None, 64) using add_n
+Level 1:tensorflow:Gradient for 'CudnnRNN'
+Level 1:tensorflow:  in  --> gradients/AddN:0, gradients/Squeeze_grad/Reshape:0, gradients/Squeeze_1_grad/Reshape:0, gradients/zeros_like:0
+Level 1:tensorflow:  out --> gradients/CudnnRNN_grad/CudnnRNNBackprop:0, gradients/CudnnRNN_grad/CudnnRNNBackprop:1, gradients/CudnnRNN_grad/CudnnRNNBackprop:2, gradients/CudnnRNN_grad/CudnnRNNBackprop:3
+Level 1:tensorflow:Gradient for 'transpose'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:0
+Level 1:tensorflow:  out --> gradients/transpose_grad/transpose:0
+Level 1:tensorflow:Gradient for 'ExpandDims'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:1
+Level 1:tensorflow:  out --> gradients/ExpandDims_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'ExpandDims_1'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:2
+Level 1:tensorflow:  out --> gradients/ExpandDims_1_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'concat_1'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:3
+Level 1:tensorflow:  out --> gradients/concat_1_grad/Slice:0, gradients/concat_1_grad/Slice_1:0, gradients/concat_1_grad/Slice_2:0, gradients/concat_1_grad/Slice_3:0, gradients/concat_1_grad/Slice_4:0, gradients/concat_1_grad/Slice_5:0, gradients/concat_1_grad/Slice_6:0, gradients/concat_1_grad/Slice_7:0, gradients/concat_1_grad/Slice_8:0, gradients/concat_1_grad/Slice_9:0, gradients/concat_1_grad/Slice_10:0, gradients/concat_1_grad/Slice_11:0, gradients/concat_1_grad/Slice_12:0, gradients/concat_1_grad/Slice_13:0, gradients/concat_1_grad/Slice_14:0, gradients/concat_1_grad/Slice_15:0
+Level 1:tensorflow:Gradient for 'Reshape'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice:0
+Level 1:tensorflow:  out --> gradients/Reshape_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_1'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_1:0
+Level 1:tensorflow:  out --> gradients/Reshape_1_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_2'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_2:0
+Level 1:tensorflow:  out --> gradients/Reshape_2_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_3'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_3:0
+Level 1:tensorflow:  out --> gradients/Reshape_3_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_4'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_4:0
+Level 1:tensorflow:  out --> gradients/Reshape_4_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_5'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_5:0
+Level 1:tensorflow:  out --> gradients/Reshape_5_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_6'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_6:0
+Level 1:tensorflow:  out --> gradients/Reshape_6_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_7'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_7:0
+Level 1:tensorflow:  out --> gradients/Reshape_7_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_8'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_8:0
+Level 1:tensorflow:  out --> gradients/Reshape_8_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_9'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_9:0
+Level 1:tensorflow:  out --> gradients/Reshape_9_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_10'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_10:0
+Level 1:tensorflow:  out --> gradients/Reshape_10_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_11'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_11:0
+Level 1:tensorflow:  out --> gradients/Reshape_11_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_12'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_12:0
+Level 1:tensorflow:  out --> gradients/Reshape_12_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_13'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_13:0
+Level 1:tensorflow:  out --> gradients/Reshape_13_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_14'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_14:0
+Level 1:tensorflow:  out --> gradients/Reshape_14_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_15'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_15:0
+Level 1:tensorflow:  out --> gradients/Reshape_15_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'transpose_1'
+Level 1:tensorflow:  in  --> gradients/Reshape_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_1_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_2'
+Level 1:tensorflow:  in  --> gradients/Reshape_1_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_2_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_3'
+Level 1:tensorflow:  in  --> gradients/Reshape_2_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_3_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_4'
+Level 1:tensorflow:  in  --> gradients/Reshape_3_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_4_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_5'
+Level 1:tensorflow:  in  --> gradients/Reshape_4_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_5_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_6'
+Level 1:tensorflow:  in  --> gradients/Reshape_5_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_6_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_7'
+Level 1:tensorflow:  in  --> gradients/Reshape_6_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_7_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_8'
+Level 1:tensorflow:  in  --> gradients/Reshape_7_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_8_grad/transpose:0
+Level 1:tensorflow:Gradient for 'split_2'
+Level 1:tensorflow:  in  --> gradients/Reshape_8_grad/Reshape:0, gradients/Reshape_9_grad/Reshape:0, gradients/Reshape_10_grad/Reshape:0, gradients/Reshape_11_grad/Reshape:0, gradients/Reshape_12_grad/Reshape:0, gradients/Reshape_13_grad/Reshape:0, gradients/Reshape_14_grad/Reshape:0, gradients/Reshape_15_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/split_2_grad/concat:0
+Level 1:tensorflow:Gradient for 'split'
+Level 1:tensorflow:  in  --> gradients/transpose_1_grad/transpose:0, gradients/transpose_2_grad/transpose:0, gradients/transpose_3_grad/transpose:0, gradients/transpose_4_grad/transpose:0
+Level 1:tensorflow:  out --> gradients/split_grad/concat:0
+Level 1:tensorflow:Gradient for 'split_1'
+Level 1:tensorflow:  in  --> gradients/transpose_5_grad/transpose:0, gradients/transpose_6_grad/transpose:0, gradients/transpose_7_grad/transpose:0, gradients/transpose_8_grad/transpose:0
+Level 1:tensorflow:  out --> gradients/split_1_grad/concat:0
+Level 1:tensorflow:Gradient for 'concat'
+Level 1:tensorflow:  in  --> gradients/split_2_grad/concat:0
+Level 1:tensorflow:  out --> gradients/concat_grad/Slice:0, gradients/concat_grad/Slice_1:0
+Level 1:tensorflow:Creating new FuncGraph for Python function <function standard_lstm at 0x7fdf9a561940> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=inputs, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 20, 64), dtype=tf.float32, name=None)), Parameter(name=init_h, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 32), dtype=tf.float32, name=None)), Parameter(name=init_c, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 32), dtype=tf.float32, name=None)), Parameter(name=kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(64, 128), dtype=tf.float32, name=None)), Parameter(name=recurrent_kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(32, 128), dtype=tf.float32, name=None)), Parameter(name=bias, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(128,), dtype=tf.float32, name=None)), Parameter(name=mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=time_major, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=go_backwards, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=sequence_lengths, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=zero_output_for_mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=return_sequences, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (<tf.Tensor 'Placeholder:0' shape=(None, 20, 64) dtype=float32>, <tf.Tensor 'lstm2/zeros:0' shape=(None, 32) dtype=float32>, <tf.Tensor 'lstm2/zeros_1:0' shape=(None, 32) dtype=float32>, <tf.Tensor 'lstm2/Identity:0' shape=(64, 128) dtype=float32>, <tf.Tensor 'lstm2/Identity_1:0' shape=(32, 128) dtype=float32>, <tf.Tensor 'lstm2/Identity_2:0' shape=(128,) dtype=float32>, None, False, False, None, False, False)] [kwargs: {}]
+Level 1:tensorflow:Creating new FuncGraph for Python function <function lstm_with_backend_selection.<locals>.gpu_lstm_with_fallback at 0x7fdf9a5e1af0> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=inputs, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 20, 64), dtype=tf.float32, name=None)), Parameter(name=init_h, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 32), dtype=tf.float32, name=None)), Parameter(name=init_c, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 32), dtype=tf.float32, name=None)), Parameter(name=kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(64, 128), dtype=tf.float32, name=None)), Parameter(name=recurrent_kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(32, 128), dtype=tf.float32, name=None)), Parameter(name=bias, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(128,), dtype=tf.float32, name=None)), Parameter(name=mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=time_major, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=go_backwards, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=sequence_lengths, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=zero_output_for_mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=return_sequences, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (<tf.Tensor 'Placeholder:0' shape=(None, 20, 64) dtype=float32>, <tf.Tensor 'lstm2/zeros:0' shape=(None, 32) dtype=float32>, <tf.Tensor 'lstm2/zeros_1:0' shape=(None, 32) dtype=float32>, <tf.Tensor 'lstm2/Identity:0' shape=(64, 128) dtype=float32>, <tf.Tensor 'lstm2/Identity_1:0' shape=(32, 128) dtype=float32>, <tf.Tensor 'lstm2/Identity_2:0' shape=(128,) dtype=float32>, None, False, False, None, False, False)] [kwargs: {}]
+Level 1:tensorflow:Gradient for 'Identity'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/grad_ys_0:0
+Level 1:tensorflow:Gradient for 'Identity_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/grad_ys_1:0
+Level 1:tensorflow:Gradient for 'Identity_2'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/grad_ys_2:0
+Level 1:tensorflow:Gradient for 'Identity_3'
+Level 1:tensorflow:  in  --> gradients/grad_ys_3:0
+Level 1:tensorflow:  out --> gradients/grad_ys_3:0
+Level 1:tensorflow:Gradient for 'ExpandDims_2'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/ExpandDims_2_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Squeeze'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/Squeeze_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Squeeze_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_3:0
+Level 1:tensorflow:  out --> gradients/Squeeze_1_grad/Reshape:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (None, 32) using add_n
+Level 1:tensorflow:Gradient for 'strided_slice'
+Level 1:tensorflow:  in  --> gradients/AddN:0
+Level 1:tensorflow:  out --> gradients/strided_slice_grad/StridedSliceGrad:0
+Level 1:tensorflow:Gradient for 'CudnnRNN'
+Level 1:tensorflow:  in  --> gradients/strided_slice_grad/StridedSliceGrad:0, gradients/Squeeze_grad/Reshape:0, gradients/Squeeze_1_grad/Reshape:0, gradients/zeros_like:0
+Level 1:tensorflow:  out --> gradients/CudnnRNN_grad/CudnnRNNBackprop:0, gradients/CudnnRNN_grad/CudnnRNNBackprop:1, gradients/CudnnRNN_grad/CudnnRNNBackprop:2, gradients/CudnnRNN_grad/CudnnRNNBackprop:3
+Level 1:tensorflow:Gradient for 'transpose'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:0
+Level 1:tensorflow:  out --> gradients/transpose_grad/transpose:0
+Level 1:tensorflow:Gradient for 'ExpandDims'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:1
+Level 1:tensorflow:  out --> gradients/ExpandDims_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'ExpandDims_1'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:2
+Level 1:tensorflow:  out --> gradients/ExpandDims_1_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'concat_1'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:3
+Level 1:tensorflow:  out --> gradients/concat_1_grad/Slice:0, gradients/concat_1_grad/Slice_1:0, gradients/concat_1_grad/Slice_2:0, gradients/concat_1_grad/Slice_3:0, gradients/concat_1_grad/Slice_4:0, gradients/concat_1_grad/Slice_5:0, gradients/concat_1_grad/Slice_6:0, gradients/concat_1_grad/Slice_7:0, gradients/concat_1_grad/Slice_8:0, gradients/concat_1_grad/Slice_9:0, gradients/concat_1_grad/Slice_10:0, gradients/concat_1_grad/Slice_11:0, gradients/concat_1_grad/Slice_12:0, gradients/concat_1_grad/Slice_13:0, gradients/concat_1_grad/Slice_14:0, gradients/concat_1_grad/Slice_15:0
+Level 1:tensorflow:Gradient for 'Reshape'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice:0
+Level 1:tensorflow:  out --> gradients/Reshape_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_1'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_1:0
+Level 1:tensorflow:  out --> gradients/Reshape_1_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_2'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_2:0
+Level 1:tensorflow:  out --> gradients/Reshape_2_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_3'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_3:0
+Level 1:tensorflow:  out --> gradients/Reshape_3_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_4'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_4:0
+Level 1:tensorflow:  out --> gradients/Reshape_4_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_5'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_5:0
+Level 1:tensorflow:  out --> gradients/Reshape_5_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_6'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_6:0
+Level 1:tensorflow:  out --> gradients/Reshape_6_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_7'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_7:0
+Level 1:tensorflow:  out --> gradients/Reshape_7_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_8'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_8:0
+Level 1:tensorflow:  out --> gradients/Reshape_8_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_9'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_9:0
+Level 1:tensorflow:  out --> gradients/Reshape_9_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_10'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_10:0
+Level 1:tensorflow:  out --> gradients/Reshape_10_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_11'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_11:0
+Level 1:tensorflow:  out --> gradients/Reshape_11_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_12'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_12:0
+Level 1:tensorflow:  out --> gradients/Reshape_12_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_13'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_13:0
+Level 1:tensorflow:  out --> gradients/Reshape_13_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_14'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_14:0
+Level 1:tensorflow:  out --> gradients/Reshape_14_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_15'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_15:0
+Level 1:tensorflow:  out --> gradients/Reshape_15_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'transpose_1'
+Level 1:tensorflow:  in  --> gradients/Reshape_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_1_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_2'
+Level 1:tensorflow:  in  --> gradients/Reshape_1_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_2_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_3'
+Level 1:tensorflow:  in  --> gradients/Reshape_2_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_3_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_4'
+Level 1:tensorflow:  in  --> gradients/Reshape_3_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_4_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_5'
+Level 1:tensorflow:  in  --> gradients/Reshape_4_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_5_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_6'
+Level 1:tensorflow:  in  --> gradients/Reshape_5_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_6_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_7'
+Level 1:tensorflow:  in  --> gradients/Reshape_6_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_7_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_8'
+Level 1:tensorflow:  in  --> gradients/Reshape_7_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_8_grad/transpose:0
+Level 1:tensorflow:Gradient for 'split_2'
+Level 1:tensorflow:  in  --> gradients/Reshape_8_grad/Reshape:0, gradients/Reshape_9_grad/Reshape:0, gradients/Reshape_10_grad/Reshape:0, gradients/Reshape_11_grad/Reshape:0, gradients/Reshape_12_grad/Reshape:0, gradients/Reshape_13_grad/Reshape:0, gradients/Reshape_14_grad/Reshape:0, gradients/Reshape_15_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/split_2_grad/concat:0
+Level 1:tensorflow:Gradient for 'split'
+Level 1:tensorflow:  in  --> gradients/transpose_1_grad/transpose:0, gradients/transpose_2_grad/transpose:0, gradients/transpose_3_grad/transpose:0, gradients/transpose_4_grad/transpose:0
+Level 1:tensorflow:  out --> gradients/split_grad/concat:0
+Level 1:tensorflow:Gradient for 'split_1'
+Level 1:tensorflow:  in  --> gradients/transpose_5_grad/transpose:0, gradients/transpose_6_grad/transpose:0, gradients/transpose_7_grad/transpose:0, gradients/transpose_8_grad/transpose:0
+Level 1:tensorflow:  out --> gradients/split_1_grad/concat:0
+Level 1:tensorflow:Gradient for 'concat'
+Level 1:tensorflow:  in  --> gradients/split_2_grad/concat:0
+Level 1:tensorflow:  out --> gradients/concat_grad/Slice:0, gradients/concat_grad/Slice_1:0
+Level 1:tensorflow:Creating new FuncGraph for Python function <function StructuredFunctionWrapper.__init__.<locals>.trace_tf_function.<locals>.wrapped_fn at 0x7fdf9a5f3040> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=args_0, kind=POSITIONAL_ONLY, optional=False, type_constraint=TensorSpec(shape=(), dtype=tf.int64, name=None))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (TensorSpec(shape=(), dtype=tf.int64, name=None),)] [kwargs: {}]
+Level 1:tensorflow:Creating new FuncGraph for Python function <function StructuredFunctionWrapper.__init__.<locals>.trace_tf_function.<locals>.wrapped_fn at 0x7fdf9a5f38b0> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=args_0, kind=POSITIONAL_ONLY, optional=False, type_constraint=TensorSpec(shape=(100,), dtype=tf.int64, name=None))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (TensorSpec(shape=(100,), dtype=tf.int64, name=None),)] [kwargs: {}]
+Level 1:tensorflow:Creating new FuncGraph for Python function <function StructuredFunctionWrapper.__init__.<locals>.trace_tf_function.<locals>.wrapped_fn at 0x7fdf9a5a2310> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=args_0, kind=POSITIONAL_ONLY, optional=False, type_constraint=TensorSpec(shape=(None,), dtype=tf.int64, name=None)), Parameter(name=args_1, kind=POSITIONAL_ONLY, optional=False, type_constraint=TensorSpec(shape=(100, 20, 2), dtype=tf.float32, name=None)), Parameter(name=args_2, kind=POSITIONAL_ONLY, optional=False, type_constraint=TensorSpec(shape=(100, 1), dtype=tf.float32, name=None))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (TensorSpec(shape=(None,), dtype=tf.int64, name=None), TensorSpec(shape=(100, 20, 2), dtype=tf.float32, name=None), TensorSpec(shape=(100, 1), dtype=tf.float32, name=None))] [kwargs: {}]
+Level 1:tensorflow:Creating new FuncGraph for Python function <function Model.make_train_function.<locals>.train_function at 0x7fdf9a5a24c0> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=iterator, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=IteratorSpec((TensorSpec(shape=(None, 20, 2), dtype=tf.float32, name=None), TensorSpec(shape=(None, 1), dtype=tf.float32, name=None)),))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (<tensorflow.python.data.ops.iterator_ops.OwnedIterator object at 0x7fdf9a430850>,)] [kwargs: {}]
+Level 1:tensorflow:Creating new FuncGraph for Python function <function standard_lstm at 0x7fdf9a3fa280> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=inputs, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 20, 2), dtype=tf.float32, name=None)), Parameter(name=init_h, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 64), dtype=tf.float32, name=None)), Parameter(name=init_c, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 64), dtype=tf.float32, name=None)), Parameter(name=kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(2, 256), dtype=tf.float32, name=None)), Parameter(name=recurrent_kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(64, 256), dtype=tf.float32, name=None)), Parameter(name=bias, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(256,), dtype=tf.float32, name=None)), Parameter(name=mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=time_major, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=go_backwards, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=sequence_lengths, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=zero_output_for_mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=return_sequences, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=True))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (<tf.Tensor 'IteratorGetNext:0' shape=(None, 20, 2) dtype=float32>, <tf.Tensor 'model_2/lstm1/zeros:0' shape=(None, 64) dtype=float32>, <tf.Tensor 'model_2/lstm1/zeros_1:0' shape=(None, 64) dtype=float32>, <tf.Tensor 'model_2/lstm1/Identity:0' shape=(2, 256) dtype=float32>, <tf.Tensor 'model_2/lstm1/Identity_1:0' shape=(64, 256) dtype=float32>, <tf.Tensor 'model_2/lstm1/Identity_2:0' shape=(256,) dtype=float32>, None, False, False, None, False, True)] [kwargs: {}]
+Level 1:tensorflow:Creating new FuncGraph for Python function <function lstm_with_backend_selection.<locals>.gpu_lstm_with_fallback at 0x7fdf9a3fa700> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=inputs, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 20, 2), dtype=tf.float32, name=None)), Parameter(name=init_h, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 64), dtype=tf.float32, name=None)), Parameter(name=init_c, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 64), dtype=tf.float32, name=None)), Parameter(name=kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(2, 256), dtype=tf.float32, name=None)), Parameter(name=recurrent_kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(64, 256), dtype=tf.float32, name=None)), Parameter(name=bias, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(256,), dtype=tf.float32, name=None)), Parameter(name=mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=time_major, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=go_backwards, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=sequence_lengths, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=zero_output_for_mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=return_sequences, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=True))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (<tf.Tensor 'IteratorGetNext:0' shape=(None, 20, 2) dtype=float32>, <tf.Tensor 'model_2/lstm1/zeros:0' shape=(None, 64) dtype=float32>, <tf.Tensor 'model_2/lstm1/zeros_1:0' shape=(None, 64) dtype=float32>, <tf.Tensor 'model_2/lstm1/Identity:0' shape=(2, 256) dtype=float32>, <tf.Tensor 'model_2/lstm1/Identity_1:0' shape=(64, 256) dtype=float32>, <tf.Tensor 'model_2/lstm1/Identity_2:0' shape=(256,) dtype=float32>, None, False, False, None, False, True)] [kwargs: {}]
+Level 1:tensorflow:Gradient for 'Identity'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/grad_ys_0:0
+Level 1:tensorflow:Gradient for 'Identity_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/grad_ys_1:0
+Level 1:tensorflow:Gradient for 'Identity_2'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/grad_ys_2:0
+Level 1:tensorflow:Gradient for 'Identity_3'
+Level 1:tensorflow:  in  --> gradients/grad_ys_3:0
+Level 1:tensorflow:  out --> gradients/grad_ys_3:0
+Level 1:tensorflow:Gradient for 'strided_slice'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/strided_slice_grad/StridedSliceGrad:0
+Level 1:tensorflow:Gradient for 'transpose_9'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/transpose_9_grad/transpose:0
+Level 1:tensorflow:Gradient for 'Squeeze'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/Squeeze_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Squeeze_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_3:0
+Level 1:tensorflow:  out --> gradients/Squeeze_1_grad/Reshape:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (20, None, 64) using add_n
+Level 1:tensorflow:Gradient for 'CudnnRNN'
+Level 1:tensorflow:  in  --> gradients/AddN:0, gradients/Squeeze_grad/Reshape:0, gradients/Squeeze_1_grad/Reshape:0, gradients/zeros_like:0
+Level 1:tensorflow:  out --> gradients/CudnnRNN_grad/CudnnRNNBackprop:0, gradients/CudnnRNN_grad/CudnnRNNBackprop:1, gradients/CudnnRNN_grad/CudnnRNNBackprop:2, gradients/CudnnRNN_grad/CudnnRNNBackprop:3
+Level 1:tensorflow:Gradient for 'transpose'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:0
+Level 1:tensorflow:  out --> gradients/transpose_grad/transpose:0
+Level 1:tensorflow:Gradient for 'ExpandDims'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:1
+Level 1:tensorflow:  out --> gradients/ExpandDims_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'ExpandDims_1'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:2
+Level 1:tensorflow:  out --> gradients/ExpandDims_1_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'concat_1'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:3
+Level 1:tensorflow:  out --> gradients/concat_1_grad/Slice:0, gradients/concat_1_grad/Slice_1:0, gradients/concat_1_grad/Slice_2:0, gradients/concat_1_grad/Slice_3:0, gradients/concat_1_grad/Slice_4:0, gradients/concat_1_grad/Slice_5:0, gradients/concat_1_grad/Slice_6:0, gradients/concat_1_grad/Slice_7:0, gradients/concat_1_grad/Slice_8:0, gradients/concat_1_grad/Slice_9:0, gradients/concat_1_grad/Slice_10:0, gradients/concat_1_grad/Slice_11:0, gradients/concat_1_grad/Slice_12:0, gradients/concat_1_grad/Slice_13:0, gradients/concat_1_grad/Slice_14:0, gradients/concat_1_grad/Slice_15:0
+Level 1:tensorflow:Gradient for 'Reshape'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice:0
+Level 1:tensorflow:  out --> gradients/Reshape_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_1'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_1:0
+Level 1:tensorflow:  out --> gradients/Reshape_1_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_2'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_2:0
+Level 1:tensorflow:  out --> gradients/Reshape_2_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_3'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_3:0
+Level 1:tensorflow:  out --> gradients/Reshape_3_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_4'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_4:0
+Level 1:tensorflow:  out --> gradients/Reshape_4_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_5'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_5:0
+Level 1:tensorflow:  out --> gradients/Reshape_5_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_6'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_6:0
+Level 1:tensorflow:  out --> gradients/Reshape_6_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_7'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_7:0
+Level 1:tensorflow:  out --> gradients/Reshape_7_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_8'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_8:0
+Level 1:tensorflow:  out --> gradients/Reshape_8_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_9'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_9:0
+Level 1:tensorflow:  out --> gradients/Reshape_9_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_10'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_10:0
+Level 1:tensorflow:  out --> gradients/Reshape_10_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_11'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_11:0
+Level 1:tensorflow:  out --> gradients/Reshape_11_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_12'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_12:0
+Level 1:tensorflow:  out --> gradients/Reshape_12_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_13'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_13:0
+Level 1:tensorflow:  out --> gradients/Reshape_13_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_14'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_14:0
+Level 1:tensorflow:  out --> gradients/Reshape_14_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_15'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_15:0
+Level 1:tensorflow:  out --> gradients/Reshape_15_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'transpose_1'
+Level 1:tensorflow:  in  --> gradients/Reshape_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_1_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_2'
+Level 1:tensorflow:  in  --> gradients/Reshape_1_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_2_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_3'
+Level 1:tensorflow:  in  --> gradients/Reshape_2_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_3_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_4'
+Level 1:tensorflow:  in  --> gradients/Reshape_3_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_4_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_5'
+Level 1:tensorflow:  in  --> gradients/Reshape_4_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_5_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_6'
+Level 1:tensorflow:  in  --> gradients/Reshape_5_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_6_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_7'
+Level 1:tensorflow:  in  --> gradients/Reshape_6_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_7_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_8'
+Level 1:tensorflow:  in  --> gradients/Reshape_7_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_8_grad/transpose:0
+Level 1:tensorflow:Gradient for 'split_2'
+Level 1:tensorflow:  in  --> gradients/Reshape_8_grad/Reshape:0, gradients/Reshape_9_grad/Reshape:0, gradients/Reshape_10_grad/Reshape:0, gradients/Reshape_11_grad/Reshape:0, gradients/Reshape_12_grad/Reshape:0, gradients/Reshape_13_grad/Reshape:0, gradients/Reshape_14_grad/Reshape:0, gradients/Reshape_15_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/split_2_grad/concat:0
+Level 1:tensorflow:Gradient for 'split'
+Level 1:tensorflow:  in  --> gradients/transpose_1_grad/transpose:0, gradients/transpose_2_grad/transpose:0, gradients/transpose_3_grad/transpose:0, gradients/transpose_4_grad/transpose:0
+Level 1:tensorflow:  out --> gradients/split_grad/concat:0
+Level 1:tensorflow:Gradient for 'split_1'
+Level 1:tensorflow:  in  --> gradients/transpose_5_grad/transpose:0, gradients/transpose_6_grad/transpose:0, gradients/transpose_7_grad/transpose:0, gradients/transpose_8_grad/transpose:0
+Level 1:tensorflow:  out --> gradients/split_1_grad/concat:0
+Level 1:tensorflow:Gradient for 'concat'
+Level 1:tensorflow:  in  --> gradients/split_2_grad/concat:0
+Level 1:tensorflow:  out --> gradients/concat_grad/Slice:0, gradients/concat_grad/Slice_1:0
+Level 1:tensorflow:Creating new FuncGraph for Python function <function standard_lstm at 0x7fdf9a3fa550> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=inputs, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 20, 64), dtype=tf.float32, name=None)), Parameter(name=init_h, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 32), dtype=tf.float32, name=None)), Parameter(name=init_c, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 32), dtype=tf.float32, name=None)), Parameter(name=kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(64, 128), dtype=tf.float32, name=None)), Parameter(name=recurrent_kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(32, 128), dtype=tf.float32, name=None)), Parameter(name=bias, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(128,), dtype=tf.float32, name=None)), Parameter(name=mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=time_major, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=go_backwards, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=sequence_lengths, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=zero_output_for_mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=return_sequences, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (<tf.Tensor 'model_2/lstm1/PartitionedCall:1' shape=(None, 20, 64) dtype=float32>, <tf.Tensor 'model_2/lstm2/zeros:0' shape=(None, 32) dtype=float32>, <tf.Tensor 'model_2/lstm2/zeros_1:0' shape=(None, 32) dtype=float32>, <tf.Tensor 'model_2/lstm2/Identity:0' shape=(64, 128) dtype=float32>, <tf.Tensor 'model_2/lstm2/Identity_1:0' shape=(32, 128) dtype=float32>, <tf.Tensor 'model_2/lstm2/Identity_2:0' shape=(128,) dtype=float32>, None, False, False, None, False, False)] [kwargs: {}]
+Level 1:tensorflow:Creating new FuncGraph for Python function <function lstm_with_backend_selection.<locals>.gpu_lstm_with_fallback at 0x7fdf9a3faf70> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=inputs, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 20, 64), dtype=tf.float32, name=None)), Parameter(name=init_h, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 32), dtype=tf.float32, name=None)), Parameter(name=init_c, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 32), dtype=tf.float32, name=None)), Parameter(name=kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(64, 128), dtype=tf.float32, name=None)), Parameter(name=recurrent_kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(32, 128), dtype=tf.float32, name=None)), Parameter(name=bias, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(128,), dtype=tf.float32, name=None)), Parameter(name=mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=time_major, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=go_backwards, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=sequence_lengths, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=zero_output_for_mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=return_sequences, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (<tf.Tensor 'model_2/lstm1/PartitionedCall:1' shape=(None, 20, 64) dtype=float32>, <tf.Tensor 'model_2/lstm2/zeros:0' shape=(None, 32) dtype=float32>, <tf.Tensor 'model_2/lstm2/zeros_1:0' shape=(None, 32) dtype=float32>, <tf.Tensor 'model_2/lstm2/Identity:0' shape=(64, 128) dtype=float32>, <tf.Tensor 'model_2/lstm2/Identity_1:0' shape=(32, 128) dtype=float32>, <tf.Tensor 'model_2/lstm2/Identity_2:0' shape=(128,) dtype=float32>, None, False, False, None, False, False)] [kwargs: {}]
+Level 1:tensorflow:Gradient for 'Identity'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/grad_ys_0:0
+Level 1:tensorflow:Gradient for 'Identity_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/grad_ys_1:0
+Level 1:tensorflow:Gradient for 'Identity_2'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/grad_ys_2:0
+Level 1:tensorflow:Gradient for 'Identity_3'
+Level 1:tensorflow:  in  --> gradients/grad_ys_3:0
+Level 1:tensorflow:  out --> gradients/grad_ys_3:0
+Level 1:tensorflow:Gradient for 'ExpandDims_2'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/ExpandDims_2_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Squeeze'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/Squeeze_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Squeeze_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_3:0
+Level 1:tensorflow:  out --> gradients/Squeeze_1_grad/Reshape:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (None, 32) using add_n
+Level 1:tensorflow:Gradient for 'strided_slice'
+Level 1:tensorflow:  in  --> gradients/AddN:0
+Level 1:tensorflow:  out --> gradients/strided_slice_grad/StridedSliceGrad:0
+Level 1:tensorflow:Gradient for 'CudnnRNN'
+Level 1:tensorflow:  in  --> gradients/strided_slice_grad/StridedSliceGrad:0, gradients/Squeeze_grad/Reshape:0, gradients/Squeeze_1_grad/Reshape:0, gradients/zeros_like:0
+Level 1:tensorflow:  out --> gradients/CudnnRNN_grad/CudnnRNNBackprop:0, gradients/CudnnRNN_grad/CudnnRNNBackprop:1, gradients/CudnnRNN_grad/CudnnRNNBackprop:2, gradients/CudnnRNN_grad/CudnnRNNBackprop:3
+Level 1:tensorflow:Gradient for 'transpose'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:0
+Level 1:tensorflow:  out --> gradients/transpose_grad/transpose:0
+Level 1:tensorflow:Gradient for 'ExpandDims'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:1
+Level 1:tensorflow:  out --> gradients/ExpandDims_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'ExpandDims_1'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:2
+Level 1:tensorflow:  out --> gradients/ExpandDims_1_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'concat_1'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:3
+Level 1:tensorflow:  out --> gradients/concat_1_grad/Slice:0, gradients/concat_1_grad/Slice_1:0, gradients/concat_1_grad/Slice_2:0, gradients/concat_1_grad/Slice_3:0, gradients/concat_1_grad/Slice_4:0, gradients/concat_1_grad/Slice_5:0, gradients/concat_1_grad/Slice_6:0, gradients/concat_1_grad/Slice_7:0, gradients/concat_1_grad/Slice_8:0, gradients/concat_1_grad/Slice_9:0, gradients/concat_1_grad/Slice_10:0, gradients/concat_1_grad/Slice_11:0, gradients/concat_1_grad/Slice_12:0, gradients/concat_1_grad/Slice_13:0, gradients/concat_1_grad/Slice_14:0, gradients/concat_1_grad/Slice_15:0
+Level 1:tensorflow:Gradient for 'Reshape'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice:0
+Level 1:tensorflow:  out --> gradients/Reshape_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_1'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_1:0
+Level 1:tensorflow:  out --> gradients/Reshape_1_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_2'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_2:0
+Level 1:tensorflow:  out --> gradients/Reshape_2_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_3'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_3:0
+Level 1:tensorflow:  out --> gradients/Reshape_3_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_4'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_4:0
+Level 1:tensorflow:  out --> gradients/Reshape_4_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_5'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_5:0
+Level 1:tensorflow:  out --> gradients/Reshape_5_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_6'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_6:0
+Level 1:tensorflow:  out --> gradients/Reshape_6_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_7'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_7:0
+Level 1:tensorflow:  out --> gradients/Reshape_7_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_8'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_8:0
+Level 1:tensorflow:  out --> gradients/Reshape_8_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_9'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_9:0
+Level 1:tensorflow:  out --> gradients/Reshape_9_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_10'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_10:0
+Level 1:tensorflow:  out --> gradients/Reshape_10_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_11'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_11:0
+Level 1:tensorflow:  out --> gradients/Reshape_11_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_12'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_12:0
+Level 1:tensorflow:  out --> gradients/Reshape_12_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_13'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_13:0
+Level 1:tensorflow:  out --> gradients/Reshape_13_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_14'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_14:0
+Level 1:tensorflow:  out --> gradients/Reshape_14_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_15'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_15:0
+Level 1:tensorflow:  out --> gradients/Reshape_15_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'transpose_1'
+Level 1:tensorflow:  in  --> gradients/Reshape_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_1_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_2'
+Level 1:tensorflow:  in  --> gradients/Reshape_1_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_2_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_3'
+Level 1:tensorflow:  in  --> gradients/Reshape_2_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_3_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_4'
+Level 1:tensorflow:  in  --> gradients/Reshape_3_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_4_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_5'
+Level 1:tensorflow:  in  --> gradients/Reshape_4_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_5_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_6'
+Level 1:tensorflow:  in  --> gradients/Reshape_5_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_6_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_7'
+Level 1:tensorflow:  in  --> gradients/Reshape_6_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_7_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_8'
+Level 1:tensorflow:  in  --> gradients/Reshape_7_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_8_grad/transpose:0
+Level 1:tensorflow:Gradient for 'split_2'
+Level 1:tensorflow:  in  --> gradients/Reshape_8_grad/Reshape:0, gradients/Reshape_9_grad/Reshape:0, gradients/Reshape_10_grad/Reshape:0, gradients/Reshape_11_grad/Reshape:0, gradients/Reshape_12_grad/Reshape:0, gradients/Reshape_13_grad/Reshape:0, gradients/Reshape_14_grad/Reshape:0, gradients/Reshape_15_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/split_2_grad/concat:0
+Level 1:tensorflow:Gradient for 'split'
+Level 1:tensorflow:  in  --> gradients/transpose_1_grad/transpose:0, gradients/transpose_2_grad/transpose:0, gradients/transpose_3_grad/transpose:0, gradients/transpose_4_grad/transpose:0
+Level 1:tensorflow:  out --> gradients/split_grad/concat:0
+Level 1:tensorflow:Gradient for 'split_1'
+Level 1:tensorflow:  in  --> gradients/transpose_5_grad/transpose:0, gradients/transpose_6_grad/transpose:0, gradients/transpose_7_grad/transpose:0, gradients/transpose_8_grad/transpose:0
+Level 1:tensorflow:  out --> gradients/split_1_grad/concat:0
+Level 1:tensorflow:Gradient for 'concat'
+Level 1:tensorflow:  in  --> gradients/split_2_grad/concat:0
+Level 1:tensorflow:  out --> gradients/concat_grad/Slice:0, gradients/concat_grad/Slice_1:0
+Level 1:tensorflow:Gradient for 'Identity'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/grad_ys_0:0
+Level 1:tensorflow:Gradient for 'Identity_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/grad_ys_1:0
+Level 1:tensorflow:Gradient for 'Identity_2'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/grad_ys_2:0
+Level 1:tensorflow:Gradient for 'Identity_3'
+Level 1:tensorflow:  in  --> gradients/grad_ys_3:0
+Level 1:tensorflow:  out --> gradients/grad_ys_3:0
+Level 1:tensorflow:Gradient for 'strided_slice_2'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/strided_slice_2_grad/StridedSliceGrad:0
+Level 1:tensorflow:Gradient for 'transpose_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/transpose_1_grad/transpose:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (1, None, 32) using add_n
+Level 1:tensorflow:Gradient for 'TensorArrayV2Stack/TensorListStack'
+Level 1:tensorflow:  in  --> gradients/AddN:0
+Level 1:tensorflow:  out --> gradients/TensorArrayV2Stack/TensorListStack_grad/TensorListFromTensor:0
+Level 1:tensorflow:Gradient for 'while/Identity_3'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/grad_ys_0:0
+Level 1:tensorflow:Gradient for 'while/Identity_4'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/grad_ys_1:0
+Level 1:tensorflow:Gradient for 'while/Identity_5'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/grad_ys_2:0
+Level 1:tensorflow:Gradient for 'while/TensorArrayV2Write/TensorListSetItem'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/TensorArrayV2Write/TensorListSetItem_grad/TensorListSetItem:0, gradients/while_grad/gradients/while/TensorArrayV2Write/TensorListSetItem_grad/TensorListGetItem:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (None, 32) using add_n
+Level 1:tensorflow:Gradient for 'while/mul_2'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/AddN:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/mul_2_grad/Reshape:0, gradients/while_grad/gradients/while/mul_2_grad/Reshape_1:0
+Level 1:tensorflow:Gradient for 'while/Sigmoid_2'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/mul_2_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/Sigmoid_2_grad/SigmoidGrad:0
+Level 1:tensorflow:Gradient for 'while/Tanh_1'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/mul_2_grad/Reshape_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/Tanh_1_grad/TanhGrad:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (None, 32) using add_n
+Level 1:tensorflow:Gradient for 'while/add_1'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/AddN_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/add_1_grad/Reshape:0, gradients/while_grad/gradients/while/add_1_grad/Reshape_1:0
+Level 1:tensorflow:Gradient for 'while/mul'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/add_1_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/mul_grad/Reshape:0, gradients/while_grad/gradients/while/mul_grad/Reshape_1:0
+Level 1:tensorflow:Gradient for 'while/mul_1'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/add_1_grad/Reshape_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/mul_1_grad/Reshape:0, gradients/while_grad/gradients/while/mul_1_grad/Reshape_1:0
+Level 1:tensorflow:Gradient for 'while/Sigmoid_1'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/mul_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/Sigmoid_1_grad/SigmoidGrad:0
+Level 1:tensorflow:Gradient for 'while/Sigmoid'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/mul_1_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/Sigmoid_grad/SigmoidGrad:0
+Level 1:tensorflow:Gradient for 'while/Tanh'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/mul_1_grad/Reshape_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/Tanh_grad/TanhGrad:0
+Level 1:tensorflow:Gradient for 'while/split'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/Sigmoid_grad/SigmoidGrad:0, gradients/while_grad/gradients/while/Sigmoid_1_grad/SigmoidGrad:0, gradients/while_grad/gradients/while/Tanh_grad/TanhGrad:0, gradients/while_grad/gradients/while/Sigmoid_2_grad/SigmoidGrad:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/split_grad/concat:0
+Level 1:tensorflow:Gradient for 'while/BiasAdd'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/split_grad/concat:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/split_grad/concat:0, gradients/while_grad/gradients/while/BiasAdd_grad/BiasAddGrad:0
+Level 1:tensorflow:Gradient for 'while/add'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/split_grad/concat:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/add_grad/Reshape:0, gradients/while_grad/gradients/while/add_grad/Reshape_1:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (128,) using add_n
+Level 1:tensorflow:Gradient for 'while/MatMul'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/add_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/MatMul_grad/MatMul:0, gradients/while_grad/gradients/while/MatMul_grad/MatMul_1:0
+Level 1:tensorflow:Gradient for 'while/MatMul_1'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/add_grad/Reshape_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/MatMul_1_grad/MatMul:0, gradients/while_grad/gradients/while/MatMul_1_grad/MatMul_1:0
+Level 1:tensorflow:Gradient for 'while/TensorArrayV2Read/TensorListGetItem'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/MatMul_grad/MatMul:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/TensorArrayV2Read/TensorListGetItem_grad/TensorListSetItem:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (64, 128) using add_n
+Level 2:tensorflow:  _AggregatedGrads 2 x (32, 128) using add_n
+Level 2:tensorflow:  _AggregatedGrads 2 x () using add_n
+Level 1:tensorflow:Gradient for 'while'
+Level 1:tensorflow:  in  --> gradients/TensorArrayV2Stack/TensorListStack_grad/TensorListFromTensor:0, gradients/grad_ys_2:0, gradients/grad_ys_3:0, gradients/zeros_like:0, gradients/zeros_like_1:0, gradients/zeros_like_2:0, gradients/zeros_like_3:0
+Level 1:tensorflow:  out --> gradients/while_grad/Identity_3:0, gradients/while_grad/Identity_4:0, gradients/while_grad/Identity_5:0, gradients/while_grad/Identity_6:0, gradients/while_grad/Identity_7:0, gradients/while_grad/Identity_8:0, gradients/while_grad/Identity_9:0
+Level 1:tensorflow:Gradient for 'TensorArrayUnstack/TensorListFromTensor'
+Level 1:tensorflow:  in  --> gradients/while_grad/Identity_6:0
+Level 1:tensorflow:  out --> gradients/TensorArrayUnstack/TensorListFromTensor_grad/TensorListStack:0
+Level 1:tensorflow:Gradient for 'transpose'
+Level 1:tensorflow:  in  --> gradients/TensorArrayUnstack/TensorListFromTensor_grad/TensorListStack:0
+Level 1:tensorflow:  out --> gradients/transpose_grad/transpose:0
+Level 1:tensorflow:Gradient for 'Identity'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/grad_ys_0:0
+Level 1:tensorflow:Gradient for 'Identity_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/grad_ys_1:0
+Level 1:tensorflow:Gradient for 'Identity_2'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/grad_ys_2:0
+Level 1:tensorflow:Gradient for 'Identity_3'
+Level 1:tensorflow:  in  --> gradients/grad_ys_3:0
+Level 1:tensorflow:  out --> gradients/grad_ys_3:0
+Level 1:tensorflow:Gradient for 'strided_slice_2'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/strided_slice_2_grad/StridedSliceGrad:0
+Level 1:tensorflow:Gradient for 'transpose_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/transpose_1_grad/transpose:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (20, None, 64) using add_n
+Level 1:tensorflow:Gradient for 'TensorArrayV2Stack/TensorListStack'
+Level 1:tensorflow:  in  --> gradients/AddN:0
+Level 1:tensorflow:  out --> gradients/TensorArrayV2Stack/TensorListStack_grad/TensorListFromTensor:0
+Level 1:tensorflow:Gradient for 'while/Identity_3'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/grad_ys_0:0
+Level 1:tensorflow:Gradient for 'while/Identity_4'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/grad_ys_1:0
+Level 1:tensorflow:Gradient for 'while/Identity_5'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/grad_ys_2:0
+Level 1:tensorflow:Gradient for 'while/TensorArrayV2Write/TensorListSetItem'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/TensorArrayV2Write/TensorListSetItem_grad/TensorListSetItem:0, gradients/while_grad/gradients/while/TensorArrayV2Write/TensorListSetItem_grad/TensorListGetItem:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (None, 64) using add_n
+Level 1:tensorflow:Gradient for 'while/mul_2'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/AddN:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/mul_2_grad/Reshape:0, gradients/while_grad/gradients/while/mul_2_grad/Reshape_1:0
+Level 1:tensorflow:Gradient for 'while/Sigmoid_2'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/mul_2_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/Sigmoid_2_grad/SigmoidGrad:0
+Level 1:tensorflow:Gradient for 'while/Tanh_1'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/mul_2_grad/Reshape_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/Tanh_1_grad/TanhGrad:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (None, 64) using add_n
+Level 1:tensorflow:Gradient for 'while/add_1'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/AddN_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/add_1_grad/Reshape:0, gradients/while_grad/gradients/while/add_1_grad/Reshape_1:0
+Level 1:tensorflow:Gradient for 'while/mul'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/add_1_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/mul_grad/Reshape:0, gradients/while_grad/gradients/while/mul_grad/Reshape_1:0
+Level 1:tensorflow:Gradient for 'while/mul_1'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/add_1_grad/Reshape_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/mul_1_grad/Reshape:0, gradients/while_grad/gradients/while/mul_1_grad/Reshape_1:0
+Level 1:tensorflow:Gradient for 'while/Sigmoid_1'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/mul_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/Sigmoid_1_grad/SigmoidGrad:0
+Level 1:tensorflow:Gradient for 'while/Sigmoid'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/mul_1_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/Sigmoid_grad/SigmoidGrad:0
+Level 1:tensorflow:Gradient for 'while/Tanh'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/mul_1_grad/Reshape_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/Tanh_grad/TanhGrad:0
+Level 1:tensorflow:Gradient for 'while/split'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/Sigmoid_grad/SigmoidGrad:0, gradients/while_grad/gradients/while/Sigmoid_1_grad/SigmoidGrad:0, gradients/while_grad/gradients/while/Tanh_grad/TanhGrad:0, gradients/while_grad/gradients/while/Sigmoid_2_grad/SigmoidGrad:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/split_grad/concat:0
+Level 1:tensorflow:Gradient for 'while/BiasAdd'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/split_grad/concat:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/split_grad/concat:0, gradients/while_grad/gradients/while/BiasAdd_grad/BiasAddGrad:0
+Level 1:tensorflow:Gradient for 'while/add'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/split_grad/concat:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/add_grad/Reshape:0, gradients/while_grad/gradients/while/add_grad/Reshape_1:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (256,) using add_n
+Level 1:tensorflow:Gradient for 'while/MatMul'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/add_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/MatMul_grad/MatMul:0, gradients/while_grad/gradients/while/MatMul_grad/MatMul_1:0
+Level 1:tensorflow:Gradient for 'while/MatMul_1'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/add_grad/Reshape_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/MatMul_1_grad/MatMul:0, gradients/while_grad/gradients/while/MatMul_1_grad/MatMul_1:0
+Level 1:tensorflow:Gradient for 'while/TensorArrayV2Read/TensorListGetItem'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/MatMul_grad/MatMul:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/TensorArrayV2Read/TensorListGetItem_grad/TensorListSetItem:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (2, 256) using add_n
+Level 2:tensorflow:  _AggregatedGrads 2 x (64, 256) using add_n
+Level 2:tensorflow:  _AggregatedGrads 2 x () using add_n
+Level 1:tensorflow:Gradient for 'while'
+Level 1:tensorflow:  in  --> gradients/TensorArrayV2Stack/TensorListStack_grad/TensorListFromTensor:0, gradients/grad_ys_2:0, gradients/grad_ys_3:0, gradients/zeros_like:0, gradients/zeros_like_1:0, gradients/zeros_like_2:0, gradients/zeros_like_3:0
+Level 1:tensorflow:  out --> gradients/while_grad/Identity_3:0, gradients/while_grad/Identity_4:0, gradients/while_grad/Identity_5:0, gradients/while_grad/Identity_6:0, gradients/while_grad/Identity_7:0, gradients/while_grad/Identity_8:0, gradients/while_grad/Identity_9:0
+Level 1:tensorflow:Gradient for 'TensorArrayUnstack/TensorListFromTensor'
+Level 1:tensorflow:  in  --> gradients/while_grad/Identity_6:0
+Level 1:tensorflow:  out --> gradients/TensorArrayUnstack/TensorListFromTensor_grad/TensorListStack:0
+Level 1:tensorflow:Gradient for 'transpose'
+Level 1:tensorflow:  in  --> gradients/TensorArrayUnstack/TensorListFromTensor_grad/TensorListStack:0
+Level 1:tensorflow:  out --> gradients/transpose_grad/transpose:0
+Level 1:tensorflow:Registering CustomGradient-6377 (<function _graph_mode_decorator.<locals>.internal_grad_fn at 0x7fdf9a3fac10>) in gradient.
+Level 1:tensorflow:Creating new FuncGraph for Python function <function Model.make_train_function.<locals>.train_function at 0x7fdf9a3dc8b0> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=iterator, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=IteratorSpec((TensorSpec(shape=(None, 20, 2), dtype=tf.float32, name=None), TensorSpec(shape=(None, 1), dtype=tf.float32, name=None)),))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (<tensorflow.python.data.ops.iterator_ops.OwnedIterator object at 0x7fdf9a430850>,)] [kwargs: {}]
+Level 1:tensorflow:Creating new FuncGraph for Python function <function standard_lstm at 0x7fdf9889ee50> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=inputs, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 20, 2), dtype=tf.float32, name=None)), Parameter(name=init_h, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 64), dtype=tf.float32, name=None)), Parameter(name=init_c, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 64), dtype=tf.float32, name=None)), Parameter(name=kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(2, 256), dtype=tf.float32, name=None)), Parameter(name=recurrent_kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(64, 256), dtype=tf.float32, name=None)), Parameter(name=bias, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(256,), dtype=tf.float32, name=None)), Parameter(name=mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=time_major, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=go_backwards, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=sequence_lengths, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=zero_output_for_mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=return_sequences, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=True))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (<tf.Tensor 'IteratorGetNext:0' shape=(None, 20, 2) dtype=float32>, <tf.Tensor 'model_2/lstm1/zeros:0' shape=(None, 64) dtype=float32>, <tf.Tensor 'model_2/lstm1/zeros_1:0' shape=(None, 64) dtype=float32>, <tf.Tensor 'model_2/lstm1/Identity:0' shape=(2, 256) dtype=float32>, <tf.Tensor 'model_2/lstm1/Identity_1:0' shape=(64, 256) dtype=float32>, <tf.Tensor 'model_2/lstm1/Identity_2:0' shape=(256,) dtype=float32>, None, False, False, None, False, True)] [kwargs: {}]
+Level 1:tensorflow:Creating new FuncGraph for Python function <function lstm_with_backend_selection.<locals>.gpu_lstm_with_fallback at 0x7fdf987d9280> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=inputs, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 20, 2), dtype=tf.float32, name=None)), Parameter(name=init_h, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 64), dtype=tf.float32, name=None)), Parameter(name=init_c, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 64), dtype=tf.float32, name=None)), Parameter(name=kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(2, 256), dtype=tf.float32, name=None)), Parameter(name=recurrent_kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(64, 256), dtype=tf.float32, name=None)), Parameter(name=bias, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(256,), dtype=tf.float32, name=None)), Parameter(name=mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=time_major, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=go_backwards, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=sequence_lengths, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=zero_output_for_mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=return_sequences, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=True))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (<tf.Tensor 'IteratorGetNext:0' shape=(None, 20, 2) dtype=float32>, <tf.Tensor 'model_2/lstm1/zeros:0' shape=(None, 64) dtype=float32>, <tf.Tensor 'model_2/lstm1/zeros_1:0' shape=(None, 64) dtype=float32>, <tf.Tensor 'model_2/lstm1/Identity:0' shape=(2, 256) dtype=float32>, <tf.Tensor 'model_2/lstm1/Identity_1:0' shape=(64, 256) dtype=float32>, <tf.Tensor 'model_2/lstm1/Identity_2:0' shape=(256,) dtype=float32>, None, False, False, None, False, True)] [kwargs: {}]
+Level 1:tensorflow:Gradient for 'Identity'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/grad_ys_0:0
+Level 1:tensorflow:Gradient for 'Identity_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/grad_ys_1:0
+Level 1:tensorflow:Gradient for 'Identity_2'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/grad_ys_2:0
+Level 1:tensorflow:Gradient for 'Identity_3'
+Level 1:tensorflow:  in  --> gradients/grad_ys_3:0
+Level 1:tensorflow:  out --> gradients/grad_ys_3:0
+Level 1:tensorflow:Gradient for 'strided_slice'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/strided_slice_grad/StridedSliceGrad:0
+Level 1:tensorflow:Gradient for 'transpose_9'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/transpose_9_grad/transpose:0
+Level 1:tensorflow:Gradient for 'Squeeze'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/Squeeze_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Squeeze_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_3:0
+Level 1:tensorflow:  out --> gradients/Squeeze_1_grad/Reshape:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (20, None, 64) using add_n
+Level 1:tensorflow:Gradient for 'CudnnRNN'
+Level 1:tensorflow:  in  --> gradients/AddN:0, gradients/Squeeze_grad/Reshape:0, gradients/Squeeze_1_grad/Reshape:0, gradients/zeros_like:0
+Level 1:tensorflow:  out --> gradients/CudnnRNN_grad/CudnnRNNBackprop:0, gradients/CudnnRNN_grad/CudnnRNNBackprop:1, gradients/CudnnRNN_grad/CudnnRNNBackprop:2, gradients/CudnnRNN_grad/CudnnRNNBackprop:3
+Level 1:tensorflow:Gradient for 'transpose'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:0
+Level 1:tensorflow:  out --> gradients/transpose_grad/transpose:0
+Level 1:tensorflow:Gradient for 'ExpandDims'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:1
+Level 1:tensorflow:  out --> gradients/ExpandDims_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'ExpandDims_1'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:2
+Level 1:tensorflow:  out --> gradients/ExpandDims_1_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'concat_1'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:3
+Level 1:tensorflow:  out --> gradients/concat_1_grad/Slice:0, gradients/concat_1_grad/Slice_1:0, gradients/concat_1_grad/Slice_2:0, gradients/concat_1_grad/Slice_3:0, gradients/concat_1_grad/Slice_4:0, gradients/concat_1_grad/Slice_5:0, gradients/concat_1_grad/Slice_6:0, gradients/concat_1_grad/Slice_7:0, gradients/concat_1_grad/Slice_8:0, gradients/concat_1_grad/Slice_9:0, gradients/concat_1_grad/Slice_10:0, gradients/concat_1_grad/Slice_11:0, gradients/concat_1_grad/Slice_12:0, gradients/concat_1_grad/Slice_13:0, gradients/concat_1_grad/Slice_14:0, gradients/concat_1_grad/Slice_15:0
+Level 1:tensorflow:Gradient for 'Reshape'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice:0
+Level 1:tensorflow:  out --> gradients/Reshape_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_1'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_1:0
+Level 1:tensorflow:  out --> gradients/Reshape_1_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_2'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_2:0
+Level 1:tensorflow:  out --> gradients/Reshape_2_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_3'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_3:0
+Level 1:tensorflow:  out --> gradients/Reshape_3_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_4'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_4:0
+Level 1:tensorflow:  out --> gradients/Reshape_4_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_5'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_5:0
+Level 1:tensorflow:  out --> gradients/Reshape_5_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_6'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_6:0
+Level 1:tensorflow:  out --> gradients/Reshape_6_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_7'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_7:0
+Level 1:tensorflow:  out --> gradients/Reshape_7_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_8'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_8:0
+Level 1:tensorflow:  out --> gradients/Reshape_8_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_9'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_9:0
+Level 1:tensorflow:  out --> gradients/Reshape_9_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_10'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_10:0
+Level 1:tensorflow:  out --> gradients/Reshape_10_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_11'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_11:0
+Level 1:tensorflow:  out --> gradients/Reshape_11_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_12'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_12:0
+Level 1:tensorflow:  out --> gradients/Reshape_12_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_13'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_13:0
+Level 1:tensorflow:  out --> gradients/Reshape_13_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_14'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_14:0
+Level 1:tensorflow:  out --> gradients/Reshape_14_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_15'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_15:0
+Level 1:tensorflow:  out --> gradients/Reshape_15_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'transpose_1'
+Level 1:tensorflow:  in  --> gradients/Reshape_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_1_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_2'
+Level 1:tensorflow:  in  --> gradients/Reshape_1_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_2_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_3'
+Level 1:tensorflow:  in  --> gradients/Reshape_2_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_3_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_4'
+Level 1:tensorflow:  in  --> gradients/Reshape_3_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_4_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_5'
+Level 1:tensorflow:  in  --> gradients/Reshape_4_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_5_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_6'
+Level 1:tensorflow:  in  --> gradients/Reshape_5_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_6_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_7'
+Level 1:tensorflow:  in  --> gradients/Reshape_6_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_7_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_8'
+Level 1:tensorflow:  in  --> gradients/Reshape_7_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_8_grad/transpose:0
+Level 1:tensorflow:Gradient for 'split_2'
+Level 1:tensorflow:  in  --> gradients/Reshape_8_grad/Reshape:0, gradients/Reshape_9_grad/Reshape:0, gradients/Reshape_10_grad/Reshape:0, gradients/Reshape_11_grad/Reshape:0, gradients/Reshape_12_grad/Reshape:0, gradients/Reshape_13_grad/Reshape:0, gradients/Reshape_14_grad/Reshape:0, gradients/Reshape_15_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/split_2_grad/concat:0
+Level 1:tensorflow:Gradient for 'split'
+Level 1:tensorflow:  in  --> gradients/transpose_1_grad/transpose:0, gradients/transpose_2_grad/transpose:0, gradients/transpose_3_grad/transpose:0, gradients/transpose_4_grad/transpose:0
+Level 1:tensorflow:  out --> gradients/split_grad/concat:0
+Level 1:tensorflow:Gradient for 'split_1'
+Level 1:tensorflow:  in  --> gradients/transpose_5_grad/transpose:0, gradients/transpose_6_grad/transpose:0, gradients/transpose_7_grad/transpose:0, gradients/transpose_8_grad/transpose:0
+Level 1:tensorflow:  out --> gradients/split_1_grad/concat:0
+Level 1:tensorflow:Gradient for 'concat'
+Level 1:tensorflow:  in  --> gradients/split_2_grad/concat:0
+Level 1:tensorflow:  out --> gradients/concat_grad/Slice:0, gradients/concat_grad/Slice_1:0
+Level 1:tensorflow:Creating new FuncGraph for Python function <function standard_lstm at 0x7fdf987d9790> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=inputs, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 20, 64), dtype=tf.float32, name=None)), Parameter(name=init_h, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 32), dtype=tf.float32, name=None)), Parameter(name=init_c, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 32), dtype=tf.float32, name=None)), Parameter(name=kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(64, 128), dtype=tf.float32, name=None)), Parameter(name=recurrent_kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(32, 128), dtype=tf.float32, name=None)), Parameter(name=bias, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(128,), dtype=tf.float32, name=None)), Parameter(name=mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=time_major, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=go_backwards, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=sequence_lengths, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=zero_output_for_mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=return_sequences, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (<tf.Tensor 'model_2/lstm1/PartitionedCall:1' shape=(None, 20, 64) dtype=float32>, <tf.Tensor 'model_2/lstm2/zeros:0' shape=(None, 32) dtype=float32>, <tf.Tensor 'model_2/lstm2/zeros_1:0' shape=(None, 32) dtype=float32>, <tf.Tensor 'model_2/lstm2/Identity:0' shape=(64, 128) dtype=float32>, <tf.Tensor 'model_2/lstm2/Identity_1:0' shape=(32, 128) dtype=float32>, <tf.Tensor 'model_2/lstm2/Identity_2:0' shape=(128,) dtype=float32>, None, False, False, None, False, False)] [kwargs: {}]
+Level 1:tensorflow:Creating new FuncGraph for Python function <function lstm_with_backend_selection.<locals>.gpu_lstm_with_fallback at 0x7fdf987d98b0> (key: FunctionContext(context=EagerContext(parent_graph=None, device_functions=(), colocation_stack=(), in_cross_replica_context=False, variable_policy=None, xla_context_id=0)), FunctionType(parameters=[Parameter(name=inputs, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 20, 64), dtype=tf.float32, name=None)), Parameter(name=init_h, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 32), dtype=tf.float32, name=None)), Parameter(name=init_c, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(None, 32), dtype=tf.float32, name=None)), Parameter(name=kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(64, 128), dtype=tf.float32, name=None)), Parameter(name=recurrent_kernel, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(32, 128), dtype=tf.float32, name=None)), Parameter(name=bias, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=TensorSpec(shape=(128,), dtype=tf.float32, name=None)), Parameter(name=mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=time_major, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=go_backwards, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=sequence_lengths, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=None)), Parameter(name=zero_output_for_mask, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False)), Parameter(name=return_sequences, kind=POSITIONAL_OR_KEYWORD, optional=False, type_constraint=Literal(value=False))], captures=OrderedDict()))
+Level 2:tensorflow:Python function signature [args: (<tf.Tensor 'model_2/lstm1/PartitionedCall:1' shape=(None, 20, 64) dtype=float32>, <tf.Tensor 'model_2/lstm2/zeros:0' shape=(None, 32) dtype=float32>, <tf.Tensor 'model_2/lstm2/zeros_1:0' shape=(None, 32) dtype=float32>, <tf.Tensor 'model_2/lstm2/Identity:0' shape=(64, 128) dtype=float32>, <tf.Tensor 'model_2/lstm2/Identity_1:0' shape=(32, 128) dtype=float32>, <tf.Tensor 'model_2/lstm2/Identity_2:0' shape=(128,) dtype=float32>, None, False, False, None, False, False)] [kwargs: {}]
+Level 1:tensorflow:Gradient for 'Identity'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/grad_ys_0:0
+Level 1:tensorflow:Gradient for 'Identity_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/grad_ys_1:0
+Level 1:tensorflow:Gradient for 'Identity_2'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/grad_ys_2:0
+Level 1:tensorflow:Gradient for 'Identity_3'
+Level 1:tensorflow:  in  --> gradients/grad_ys_3:0
+Level 1:tensorflow:  out --> gradients/grad_ys_3:0
+Level 1:tensorflow:Gradient for 'ExpandDims_2'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/ExpandDims_2_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Squeeze'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/Squeeze_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Squeeze_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_3:0
+Level 1:tensorflow:  out --> gradients/Squeeze_1_grad/Reshape:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (None, 32) using add_n
+Level 1:tensorflow:Gradient for 'strided_slice'
+Level 1:tensorflow:  in  --> gradients/AddN:0
+Level 1:tensorflow:  out --> gradients/strided_slice_grad/StridedSliceGrad:0
+Level 1:tensorflow:Gradient for 'CudnnRNN'
+Level 1:tensorflow:  in  --> gradients/strided_slice_grad/StridedSliceGrad:0, gradients/Squeeze_grad/Reshape:0, gradients/Squeeze_1_grad/Reshape:0, gradients/zeros_like:0
+Level 1:tensorflow:  out --> gradients/CudnnRNN_grad/CudnnRNNBackprop:0, gradients/CudnnRNN_grad/CudnnRNNBackprop:1, gradients/CudnnRNN_grad/CudnnRNNBackprop:2, gradients/CudnnRNN_grad/CudnnRNNBackprop:3
+Level 1:tensorflow:Gradient for 'transpose'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:0
+Level 1:tensorflow:  out --> gradients/transpose_grad/transpose:0
+Level 1:tensorflow:Gradient for 'ExpandDims'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:1
+Level 1:tensorflow:  out --> gradients/ExpandDims_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'ExpandDims_1'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:2
+Level 1:tensorflow:  out --> gradients/ExpandDims_1_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'concat_1'
+Level 1:tensorflow:  in  --> gradients/CudnnRNN_grad/CudnnRNNBackprop:3
+Level 1:tensorflow:  out --> gradients/concat_1_grad/Slice:0, gradients/concat_1_grad/Slice_1:0, gradients/concat_1_grad/Slice_2:0, gradients/concat_1_grad/Slice_3:0, gradients/concat_1_grad/Slice_4:0, gradients/concat_1_grad/Slice_5:0, gradients/concat_1_grad/Slice_6:0, gradients/concat_1_grad/Slice_7:0, gradients/concat_1_grad/Slice_8:0, gradients/concat_1_grad/Slice_9:0, gradients/concat_1_grad/Slice_10:0, gradients/concat_1_grad/Slice_11:0, gradients/concat_1_grad/Slice_12:0, gradients/concat_1_grad/Slice_13:0, gradients/concat_1_grad/Slice_14:0, gradients/concat_1_grad/Slice_15:0
+Level 1:tensorflow:Gradient for 'Reshape'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice:0
+Level 1:tensorflow:  out --> gradients/Reshape_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_1'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_1:0
+Level 1:tensorflow:  out --> gradients/Reshape_1_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_2'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_2:0
+Level 1:tensorflow:  out --> gradients/Reshape_2_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_3'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_3:0
+Level 1:tensorflow:  out --> gradients/Reshape_3_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_4'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_4:0
+Level 1:tensorflow:  out --> gradients/Reshape_4_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_5'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_5:0
+Level 1:tensorflow:  out --> gradients/Reshape_5_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_6'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_6:0
+Level 1:tensorflow:  out --> gradients/Reshape_6_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_7'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_7:0
+Level 1:tensorflow:  out --> gradients/Reshape_7_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_8'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_8:0
+Level 1:tensorflow:  out --> gradients/Reshape_8_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_9'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_9:0
+Level 1:tensorflow:  out --> gradients/Reshape_9_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_10'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_10:0
+Level 1:tensorflow:  out --> gradients/Reshape_10_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_11'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_11:0
+Level 1:tensorflow:  out --> gradients/Reshape_11_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_12'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_12:0
+Level 1:tensorflow:  out --> gradients/Reshape_12_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_13'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_13:0
+Level 1:tensorflow:  out --> gradients/Reshape_13_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_14'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_14:0
+Level 1:tensorflow:  out --> gradients/Reshape_14_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'Reshape_15'
+Level 1:tensorflow:  in  --> gradients/concat_1_grad/Slice_15:0
+Level 1:tensorflow:  out --> gradients/Reshape_15_grad/Reshape:0
+Level 1:tensorflow:Gradient for 'transpose_1'
+Level 1:tensorflow:  in  --> gradients/Reshape_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_1_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_2'
+Level 1:tensorflow:  in  --> gradients/Reshape_1_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_2_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_3'
+Level 1:tensorflow:  in  --> gradients/Reshape_2_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_3_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_4'
+Level 1:tensorflow:  in  --> gradients/Reshape_3_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_4_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_5'
+Level 1:tensorflow:  in  --> gradients/Reshape_4_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_5_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_6'
+Level 1:tensorflow:  in  --> gradients/Reshape_5_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_6_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_7'
+Level 1:tensorflow:  in  --> gradients/Reshape_6_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_7_grad/transpose:0
+Level 1:tensorflow:Gradient for 'transpose_8'
+Level 1:tensorflow:  in  --> gradients/Reshape_7_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/transpose_8_grad/transpose:0
+Level 1:tensorflow:Gradient for 'split_2'
+Level 1:tensorflow:  in  --> gradients/Reshape_8_grad/Reshape:0, gradients/Reshape_9_grad/Reshape:0, gradients/Reshape_10_grad/Reshape:0, gradients/Reshape_11_grad/Reshape:0, gradients/Reshape_12_grad/Reshape:0, gradients/Reshape_13_grad/Reshape:0, gradients/Reshape_14_grad/Reshape:0, gradients/Reshape_15_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/split_2_grad/concat:0
+Level 1:tensorflow:Gradient for 'split'
+Level 1:tensorflow:  in  --> gradients/transpose_1_grad/transpose:0, gradients/transpose_2_grad/transpose:0, gradients/transpose_3_grad/transpose:0, gradients/transpose_4_grad/transpose:0
+Level 1:tensorflow:  out --> gradients/split_grad/concat:0
+Level 1:tensorflow:Gradient for 'split_1'
+Level 1:tensorflow:  in  --> gradients/transpose_5_grad/transpose:0, gradients/transpose_6_grad/transpose:0, gradients/transpose_7_grad/transpose:0, gradients/transpose_8_grad/transpose:0
+Level 1:tensorflow:  out --> gradients/split_1_grad/concat:0
+Level 1:tensorflow:Gradient for 'concat'
+Level 1:tensorflow:  in  --> gradients/split_2_grad/concat:0
+Level 1:tensorflow:  out --> gradients/concat_grad/Slice:0, gradients/concat_grad/Slice_1:0
+Level 1:tensorflow:Gradient for 'Identity'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/grad_ys_0:0
+Level 1:tensorflow:Gradient for 'Identity_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/grad_ys_1:0
+Level 1:tensorflow:Gradient for 'Identity_2'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/grad_ys_2:0
+Level 1:tensorflow:Gradient for 'Identity_3'
+Level 1:tensorflow:  in  --> gradients/grad_ys_3:0
+Level 1:tensorflow:  out --> gradients/grad_ys_3:0
+Level 1:tensorflow:Gradient for 'strided_slice_2'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/strided_slice_2_grad/StridedSliceGrad:0
+Level 1:tensorflow:Gradient for 'transpose_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/transpose_1_grad/transpose:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (1, None, 32) using add_n
+Level 1:tensorflow:Gradient for 'TensorArrayV2Stack/TensorListStack'
+Level 1:tensorflow:  in  --> gradients/AddN:0
+Level 1:tensorflow:  out --> gradients/TensorArrayV2Stack/TensorListStack_grad/TensorListFromTensor:0
+Level 1:tensorflow:Gradient for 'while/Identity_3'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/grad_ys_0:0
+Level 1:tensorflow:Gradient for 'while/Identity_4'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/grad_ys_1:0
+Level 1:tensorflow:Gradient for 'while/Identity_5'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/grad_ys_2:0
+Level 1:tensorflow:Gradient for 'while/TensorArrayV2Write/TensorListSetItem'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/TensorArrayV2Write/TensorListSetItem_grad/TensorListSetItem:0, gradients/while_grad/gradients/while/TensorArrayV2Write/TensorListSetItem_grad/TensorListGetItem:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (None, 32) using add_n
+Level 1:tensorflow:Gradient for 'while/mul_2'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/AddN:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/mul_2_grad/Reshape:0, gradients/while_grad/gradients/while/mul_2_grad/Reshape_1:0
+Level 1:tensorflow:Gradient for 'while/Sigmoid_2'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/mul_2_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/Sigmoid_2_grad/SigmoidGrad:0
+Level 1:tensorflow:Gradient for 'while/Tanh_1'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/mul_2_grad/Reshape_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/Tanh_1_grad/TanhGrad:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (None, 32) using add_n
+Level 1:tensorflow:Gradient for 'while/add_1'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/AddN_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/add_1_grad/Reshape:0, gradients/while_grad/gradients/while/add_1_grad/Reshape_1:0
+Level 1:tensorflow:Gradient for 'while/mul'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/add_1_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/mul_grad/Reshape:0, gradients/while_grad/gradients/while/mul_grad/Reshape_1:0
+Level 1:tensorflow:Gradient for 'while/mul_1'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/add_1_grad/Reshape_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/mul_1_grad/Reshape:0, gradients/while_grad/gradients/while/mul_1_grad/Reshape_1:0
+Level 1:tensorflow:Gradient for 'while/Sigmoid_1'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/mul_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/Sigmoid_1_grad/SigmoidGrad:0
+Level 1:tensorflow:Gradient for 'while/Sigmoid'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/mul_1_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/Sigmoid_grad/SigmoidGrad:0
+Level 1:tensorflow:Gradient for 'while/Tanh'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/mul_1_grad/Reshape_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/Tanh_grad/TanhGrad:0
+Level 1:tensorflow:Gradient for 'while/split'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/Sigmoid_grad/SigmoidGrad:0, gradients/while_grad/gradients/while/Sigmoid_1_grad/SigmoidGrad:0, gradients/while_grad/gradients/while/Tanh_grad/TanhGrad:0, gradients/while_grad/gradients/while/Sigmoid_2_grad/SigmoidGrad:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/split_grad/concat:0
+Level 1:tensorflow:Gradient for 'while/BiasAdd'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/split_grad/concat:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/split_grad/concat:0, gradients/while_grad/gradients/while/BiasAdd_grad/BiasAddGrad:0
+Level 1:tensorflow:Gradient for 'while/add'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/split_grad/concat:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/add_grad/Reshape:0, gradients/while_grad/gradients/while/add_grad/Reshape_1:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (128,) using add_n
+Level 1:tensorflow:Gradient for 'while/MatMul'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/add_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/MatMul_grad/MatMul:0, gradients/while_grad/gradients/while/MatMul_grad/MatMul_1:0
+Level 1:tensorflow:Gradient for 'while/MatMul_1'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/add_grad/Reshape_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/MatMul_1_grad/MatMul:0, gradients/while_grad/gradients/while/MatMul_1_grad/MatMul_1:0
+Level 1:tensorflow:Gradient for 'while/TensorArrayV2Read/TensorListGetItem'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/MatMul_grad/MatMul:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/TensorArrayV2Read/TensorListGetItem_grad/TensorListSetItem:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (64, 128) using add_n
+Level 2:tensorflow:  _AggregatedGrads 2 x (32, 128) using add_n
+Level 2:tensorflow:  _AggregatedGrads 2 x () using add_n
+Level 1:tensorflow:Gradient for 'while'
+Level 1:tensorflow:  in  --> gradients/TensorArrayV2Stack/TensorListStack_grad/TensorListFromTensor:0, gradients/grad_ys_2:0, gradients/grad_ys_3:0, gradients/zeros_like:0, gradients/zeros_like_1:0, gradients/zeros_like_2:0, gradients/zeros_like_3:0
+Level 1:tensorflow:  out --> gradients/while_grad/Identity_3:0, gradients/while_grad/Identity_4:0, gradients/while_grad/Identity_5:0, gradients/while_grad/Identity_6:0, gradients/while_grad/Identity_7:0, gradients/while_grad/Identity_8:0, gradients/while_grad/Identity_9:0
+Level 1:tensorflow:Gradient for 'TensorArrayUnstack/TensorListFromTensor'
+Level 1:tensorflow:  in  --> gradients/while_grad/Identity_6:0
+Level 1:tensorflow:  out --> gradients/TensorArrayUnstack/TensorListFromTensor_grad/TensorListStack:0
+Level 1:tensorflow:Gradient for 'transpose'
+Level 1:tensorflow:  in  --> gradients/TensorArrayUnstack/TensorListFromTensor_grad/TensorListStack:0
+Level 1:tensorflow:  out --> gradients/transpose_grad/transpose:0
+Level 1:tensorflow:Gradient for 'Identity'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/grad_ys_0:0
+Level 1:tensorflow:Gradient for 'Identity_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/grad_ys_1:0
+Level 1:tensorflow:Gradient for 'Identity_2'
+Level 1:tensorflow:  in  --> gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/grad_ys_2:0
+Level 1:tensorflow:Gradient for 'Identity_3'
+Level 1:tensorflow:  in  --> gradients/grad_ys_3:0
+Level 1:tensorflow:  out --> gradients/grad_ys_3:0
+Level 1:tensorflow:Gradient for 'strided_slice_2'
+Level 1:tensorflow:  in  --> gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/strided_slice_2_grad/StridedSliceGrad:0
+Level 1:tensorflow:Gradient for 'transpose_1'
+Level 1:tensorflow:  in  --> gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/transpose_1_grad/transpose:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (20, None, 64) using add_n
+Level 1:tensorflow:Gradient for 'TensorArrayV2Stack/TensorListStack'
+Level 1:tensorflow:  in  --> gradients/AddN:0
+Level 1:tensorflow:  out --> gradients/TensorArrayV2Stack/TensorListStack_grad/TensorListFromTensor:0
+Level 1:tensorflow:Gradient for 'while/Identity_3'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/grad_ys_0:0
+Level 1:tensorflow:Gradient for 'while/Identity_4'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/grad_ys_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/grad_ys_1:0
+Level 1:tensorflow:Gradient for 'while/Identity_5'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/grad_ys_2:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/grad_ys_2:0
+Level 1:tensorflow:Gradient for 'while/TensorArrayV2Write/TensorListSetItem'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/grad_ys_0:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/TensorArrayV2Write/TensorListSetItem_grad/TensorListSetItem:0, gradients/while_grad/gradients/while/TensorArrayV2Write/TensorListSetItem_grad/TensorListGetItem:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (None, 64) using add_n
+Level 1:tensorflow:Gradient for 'while/mul_2'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/AddN:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/mul_2_grad/Reshape:0, gradients/while_grad/gradients/while/mul_2_grad/Reshape_1:0
+Level 1:tensorflow:Gradient for 'while/Sigmoid_2'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/mul_2_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/Sigmoid_2_grad/SigmoidGrad:0
+Level 1:tensorflow:Gradient for 'while/Tanh_1'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/mul_2_grad/Reshape_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/Tanh_1_grad/TanhGrad:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (None, 64) using add_n
+Level 1:tensorflow:Gradient for 'while/add_1'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/AddN_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/add_1_grad/Reshape:0, gradients/while_grad/gradients/while/add_1_grad/Reshape_1:0
+Level 1:tensorflow:Gradient for 'while/mul'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/add_1_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/mul_grad/Reshape:0, gradients/while_grad/gradients/while/mul_grad/Reshape_1:0
+Level 1:tensorflow:Gradient for 'while/mul_1'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/add_1_grad/Reshape_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/mul_1_grad/Reshape:0, gradients/while_grad/gradients/while/mul_1_grad/Reshape_1:0
+Level 1:tensorflow:Gradient for 'while/Sigmoid_1'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/mul_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/Sigmoid_1_grad/SigmoidGrad:0
+Level 1:tensorflow:Gradient for 'while/Sigmoid'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/mul_1_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/Sigmoid_grad/SigmoidGrad:0
+Level 1:tensorflow:Gradient for 'while/Tanh'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/mul_1_grad/Reshape_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/Tanh_grad/TanhGrad:0
+Level 1:tensorflow:Gradient for 'while/split'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/Sigmoid_grad/SigmoidGrad:0, gradients/while_grad/gradients/while/Sigmoid_1_grad/SigmoidGrad:0, gradients/while_grad/gradients/while/Tanh_grad/TanhGrad:0, gradients/while_grad/gradients/while/Sigmoid_2_grad/SigmoidGrad:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/split_grad/concat:0
+Level 1:tensorflow:Gradient for 'while/BiasAdd'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/split_grad/concat:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/split_grad/concat:0, gradients/while_grad/gradients/while/BiasAdd_grad/BiasAddGrad:0
+Level 1:tensorflow:Gradient for 'while/add'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/split_grad/concat:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/add_grad/Reshape:0, gradients/while_grad/gradients/while/add_grad/Reshape_1:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (256,) using add_n
+Level 1:tensorflow:Gradient for 'while/MatMul'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/add_grad/Reshape:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/MatMul_grad/MatMul:0, gradients/while_grad/gradients/while/MatMul_grad/MatMul_1:0
+Level 1:tensorflow:Gradient for 'while/MatMul_1'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/add_grad/Reshape_1:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/MatMul_1_grad/MatMul:0, gradients/while_grad/gradients/while/MatMul_1_grad/MatMul_1:0
+Level 1:tensorflow:Gradient for 'while/TensorArrayV2Read/TensorListGetItem'
+Level 1:tensorflow:  in  --> gradients/while_grad/gradients/while/MatMul_grad/MatMul:0
+Level 1:tensorflow:  out --> gradients/while_grad/gradients/while/TensorArrayV2Read/TensorListGetItem_grad/TensorListSetItem:0
+Level 2:tensorflow:  _AggregatedGrads 2 x (2, 256) using add_n
+Level 2:tensorflow:  _AggregatedGrads 2 x (64, 256) using add_n
+Level 2:tensorflow:  _AggregatedGrads 2 x () using add_n
+Level 1:tensorflow:Gradient for 'while'
+Level 1:tensorflow:  in  --> gradients/TensorArrayV2Stack/TensorListStack_grad/TensorListFromTensor:0, gradients/grad_ys_2:0, gradients/grad_ys_3:0, gradients/zeros_like:0, gradients/zeros_like_1:0, gradients/zeros_like_2:0, gradients/zeros_like_3:0
+Level 1:tensorflow:  out --> gradients/while_grad/Identity_3:0, gradients/while_grad/Identity_4:0, gradients/while_grad/Identity_5:0, gradients/while_grad/Identity_6:0, gradients/while_grad/Identity_7:0, gradients/while_grad/Identity_8:0, gradients/while_grad/Identity_9:0
+Level 1:tensorflow:Gradient for 'TensorArrayUnstack/TensorListFromTensor'
+Level 1:tensorflow:  in  --> gradients/while_grad/Identity_6:0
+Level 1:tensorflow:  out --> gradients/TensorArrayUnstack/TensorListFromTensor_grad/TensorListStack:0
+Level 1:tensorflow:Gradient for 'transpose'
+Level 1:tensorflow:  in  --> gradients/TensorArrayUnstack/TensorListFromTensor_grad/TensorListStack:0
+Level 1:tensorflow:  out --> gradients/transpose_grad/transpose:0
+Level 1:tensorflow:Registering CustomGradient-8918 (<function _graph_mode_decorator.<locals>.internal_grad_fn at 0x7fdf9889ec10>) in gradient.
+INFO:backend.ml_engine.transfer_learning:Simulated pre-trained weights initialized
+INFO:backend.ml_engine.transfer_learning:Froze 2 pre-trained layers for fine-tuning
+INFO:backend.ml_engine.gan_model:Initializing GANModel on device: cpu
+INFO:backend.ml_engine.hrl_model:{'event': 'hrl_init', 'device': 'cpu', 'state_size': 4, 'action_size': 3}
+ERROR:__main__:{'event': 'unexpected_error', 'error': '__init__() takes 3 positional arguments but 4 were given'}
+ERROR:__main__:{'event': 'fatal_error', 'error': '__init__() takes 3 positional arguments but 4 were given'}
+INFO:__main__:Starting debug tests...
+ERROR:__main__:Missing environment variables: NEWSAPI_KEY
+INFO:backend.api_handler:{'event': 'get_balance', 'cached': True}
+INFO:__main__:API connectivity test passed. Balance: {'USD': 10000, 'XBT': 0, 'ETH': 0}
+INFO:backend.ml_engine.transfer_learning:Simulated pre-trained weights initialized
+INFO:backend.ml_engine.transfer_learning:Froze 2 pre-trained layers for fine-tuning
+INFO:backend.ml_engine.gan_model:Initializing GANModel on device: cpu
+INFO:backend.ml_engine.hrl_model:{'event': 'hrl_init', 'device': 'cpu', 'state_size': 4, 'action_size': 3}
+INFO:__main__:Model initialization test passed.
+INFO:backend.ml_engine.transfer_learning:Simulated pre-trained weights initialized
+INFO:backend.ml_engine.transfer_learning:Froze 2 pre-trained layers for fine-tuning
+INFO:backend.ml_engine.gan_model:Initializing GANModel on device: cpu
+INFO:backend.ml_engine.hrl_model:{'event': 'hrl_init', 'device': 'cpu', 'state_size': 4, 'action_size': 3}
+ERROR:__main__:Strategy manager test failed: __init__() takes 3 positional arguments but 4 were given
+INFO:__main__:Debug tests completed.

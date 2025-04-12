@@ -1,6 +1,11 @@
 import pandas as pd
 import numpy as np
-from backend.api_handler import KrakenAPI
+try:
+    from api_handler import KrakenAPI  # Ensure this path is correct
+except ModuleNotFoundError:
+    import sys
+    sys.path.append('/home/ambaence/Downloads/AiKrakBot')  # Add the correct path
+    from api_handler import KrakenAPI
 from backend.ml_engine.ensemble import EnsembleModel
 from backend.strategies.manager import StrategyManager
 import logging

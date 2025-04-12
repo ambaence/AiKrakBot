@@ -1,0 +1,8 @@
+services:
+  aikrakbot:
+    image: aikrakbot
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "5000:5000"

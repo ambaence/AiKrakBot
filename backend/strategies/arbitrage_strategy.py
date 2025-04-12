@@ -2,10 +2,11 @@ from config import TRADING_PAIRS, MAX_TRADE_SIZE, TAKER_FEE
 import logging
 
 class ArbitrageStrategy:
-    def __init__(self, api, risk_manager):
+    def __init__(self, api, risk_manager, model=None):
         """Initialize arbitrage strategy."""
         self.api = api
         self.risk_manager = risk_manager
+        self.model = model  # Add model if needed
         self.prices = {}
 
     def update_prices(self, pair, price):

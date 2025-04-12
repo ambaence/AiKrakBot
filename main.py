@@ -32,7 +32,7 @@ async def main():
         api.get_balance()  # Validate API key permissions
 
         model = EnsembleModel(api)
-        risk_manager = RiskManager(api)
+        risk_manager = RiskManager(api)  # Ensure only 'api' is passed
         strategy_manager = StrategyManager(api, model, risk_manager)
         
         for pair in TRADING_PAIRS:

@@ -1,12 +1,11 @@
 import asyncio
 import os
 import logging
-import json
+from flask import Flask, jsonify
 from backend.api_handler import KrakenAPI
 from backend.ml_engine.ensemble import EnsembleModel
 from backend.risk_management import RiskManager
 from backend.strategies.manager import StrategyManager
-from frontend.app import TradingApp
 from config import TRADING_PAIRS, LOG_LEVEL, SIMULATE  # Import from config
 
 # Structured JSON logging
@@ -17,6 +16,16 @@ logging.basicConfig(
     handlers=[logging.FileHandler('logs/bot.log', encoding='utf-8')]
 )
 logger = logging.getLogger(__name__)
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return jsonify({"message": "Welcome to AiKrakBot Web UI"})
+
+@app.route("/status")
+def status():
+    return jsonify({"status": "running"})
 
 async def main():
     try:
@@ -42,9 +51,8 @@ async def main():
             except Exception as e:
                 logger.error({"event": "fee_prefetch_failed", "pair": pair, "error": str(e)})
 
-        app = TradingApp(api, model, risk_manager, strategy_manager, simulate=simulate)
         logger.info({"event": "initialization_complete"})
-        app.run()
+        app.run(host="0.0.0.0", port=5000)
 
     except ValueError as e:
         logger.error({"event": "initialization_error", "error": str(e)})

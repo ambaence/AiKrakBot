@@ -1,0 +1,6 @@
+services:
+  aikrakbot:
+    image: aikrakbot
+    build:
+      context: .
+      dockerfile: ./Dockerfile

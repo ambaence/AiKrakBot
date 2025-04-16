@@ -1,5 +1,4 @@
 # AiKrakBot
-An AI-powered project for [describe your project briefly].
 
 ## File Structure
 ```
